@@ -1,0 +1,32 @@
+INVITACIÓN ARTEMIO — ARCHIVOS LISTOS PARA GITHUB
+
+IMPORTANTE:
+Todos los archivos están ahora en UNA SOLA CARPETA.
+No necesitas crear carpetas img ni audio.
+
+SUBIR A GITHUB:
+1. Abre el repositorio invitacion-artemio-70.
+2. Ve a Add file > Upload files.
+3. Elimina de GitHub los archivos viejos si vas a reemplazarlos, o sube estos con el mismo nombre.
+4. En esta carpeta, presiona Ctrl + A.
+5. Arrastra TODOS los archivos a GitHub.
+6. Haz Commit changes.
+
+DEBES VER EN GITHUB:
+index.html
+style.css
+script.js
+favicon.png
+artemio.webp
+mama.webp
+familia.webp
+viaje.webp
+preview-whatsapp.jpg
+
+MÚSICA:
+La invitación usa Canon en Re mayor desde Wikimedia Commons.
+Con Internet puede reproducirse. Muchos celulares bloquean el inicio automático;
+si pasa eso, el invitado solo debe tocar el botón ♪.
+
+VERCEL:
+Después del Commit, importa invitacion-artemio-70 en Vercel y pulsa Deploy.
