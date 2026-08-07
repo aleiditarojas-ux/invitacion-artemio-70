@@ -1,12 +1,13 @@
-VERSIÓN FINAL AJUSTADA
+VERSIÓN PREMIUM — VESTIMENTA Y CONFIRMACIÓN
 
-Cambios incluidos:
-- Código de vestimenta: Casual Elegante.
-- Tarjeta marfil para código de vestimenta.
-- Sección independiente azul marino/plateada para ¿Nos acompañas?
-- Se eliminó el texto "Confirmación de asistencia".
-- Botón: CONFIRMO MI ASISTENCIA.
-- Se conserva el formulario privado y gracias.html.
+Cambios principales:
+- Tarjeta marfil premium con textura, doble borde y ornamentos.
+- Ícono decorativo en Código de vestimenta.
+- Casual Elegante con tipografía grande.
+- Separadores ornamentales.
+- Sección ¿Nos acompañas? en azul marino con detalles plateados.
+- Botón metálico: CONFIRMO MI ASISTENCIA.
+- Diseño responsive para celular.
 
 PARA ACTUALIZAR:
 1. Descomprime este ZIP.
