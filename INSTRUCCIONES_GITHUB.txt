@@ -30,3 +30,5 @@ si pasa eso, el invitado solo debe tocar el botón ♪.
 
 VERCEL:
 Después del Commit, importa invitacion-artemio-70 en Vercel y pulsa Deploy.
+
+NUEVO: gracias.html muestra una confirmación elegante después de enviar un mensaje y regresa automáticamente a la invitación.

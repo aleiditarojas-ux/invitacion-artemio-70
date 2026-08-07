@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07182f">
+  <title>Mensaje enviado · Artemio 70</title>
+  <style>
+    :root{--navy:#07182f;--navy2:#0d2b50;--silver:#c9ced8;--white:#f8f9fb}
+    *{box-sizing:border-box}
+    body{
+      margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
+      background:radial-gradient(circle at 50% 30%,#173c6d 0,#07182f 52%,#020912 100%);
+      color:var(--white);font-family:Arial,Helvetica,sans-serif;text-align:center;
+    }
+    .card{max-width:620px}
+    .icon{
+      width:72px;height:72px;margin:0 auto 24px;border-radius:50%;
+      border:1px solid var(--silver);display:grid;place-items:center;
+      font-family:Georgia,serif;font-size:2rem;color:var(--silver)
+    }
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(2.4rem,8vw,4.5rem);margin:0 0 18px}
+    p{line-height:1.75;color:#e4e8ee}
+    .line{width:90px;height:1px;background:linear-gradient(90deg,transparent,var(--silver),transparent);margin:24px auto}
+    .small{font-size:.8rem;color:var(--silver);letter-spacing:.08em}
+    a{display:inline-block;margin-top:18px;padding:12px 18px;border:1px solid var(--silver);color:white;text-decoration:none;font-size:.75rem;letter-spacing:.1em}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon">♥</div>
+    <h1>¡Muchas gracias!</h1>
+    <div class="line"></div>
+    <p>Tu mensaje para Artemio ha sido enviado de forma privada a la familia.</p>
+    <p class="small">Regresaremos a la invitación en unos segundos.</p>
+    <a href="/">VOLVER A LA INVITACIÓN</a>
+  </main>
+  <script>
+    setTimeout(function(){ window.location.href = "/"; }, 2800);
+  </script>
+</body>
+</html>
