@@ -99,3 +99,134 @@ footer{padding:62px 20px;text-align:center;background:#020912}
 
 /* Versión de prueba: apertura directa */
 .welcome{display:none!important}
+
+/* Secciones diferenciadas: código de vestimenta y confirmación */
+.info-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  max-width:980px;
+  margin:38px auto 0;
+}
+.info-card{
+  min-height:290px;
+  padding:38px 28px;
+  border:1px solid rgba(201,206,216,.55);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.info-card h3{
+  margin:10px 0 12px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:2.3rem;
+  font-weight:400;
+}
+.info-card p:not(.eyebrow){
+  max-width:390px;
+  margin:0 auto;
+  color:#e2e6ec;
+}
+.dress-card{
+  background:rgba(255,255,255,.035);
+}
+.rsvp-card{
+  background:linear-gradient(180deg,rgba(201,206,216,.10),rgba(255,255,255,.035));
+}
+.info-icon{
+  width:42px;
+  height:42px;
+  margin-bottom:14px;
+  border:1px solid rgba(201,206,216,.7);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--silver);
+  font-family:Georgia,serif;
+  font-size:1rem;
+}
+.rsvp-card .rsvp{
+  margin-top:24px;
+}
+@media(max-width:800px){
+  .info-actions{grid-template-columns:1fr}
+  .info-card{min-height:0}
+}
+
+/* Diferenciación visual marcada entre vestimenta y confirmación */
+.dress-highlight{
+  max-width:760px;
+  margin:42px auto 24px;
+  padding:26px 30px;
+  display:flex;
+  gap:22px;
+  align-items:center;
+  text-align:left;
+  background:rgba(241,236,226,.96);
+  color:var(--navy);
+  border-left:5px solid var(--silver-dark);
+}
+.dress-highlight .eyebrow{
+  color:#697586;
+  margin:0 0 4px;
+}
+.dress-highlight h3{
+  margin:0 0 6px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:2.5rem;
+  font-weight:400;
+}
+.dress-highlight p:last-child{
+  margin:0;
+  color:#4f5a68;
+}
+.dress-symbol{
+  flex:0 0 auto;
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border:1px solid #9aa4b1;
+  border-radius:50%;
+  font-size:1.35rem;
+  color:#697586;
+}
+
+.rsvp-highlight{
+  max-width:820px;
+  margin:28px auto 0;
+  padding:44px 30px;
+  text-align:center;
+  border:1px solid rgba(201,206,216,.7);
+  background:radial-gradient(circle at top,rgba(201,206,216,.12),rgba(255,255,255,.025));
+}
+.rsvp-highlight h3{
+  margin:10px 0 12px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:3rem;
+  font-weight:400;
+}
+.rsvp-highlight p:not(.eyebrow){
+  max-width:600px;
+  margin:0 auto;
+  color:#e1e5eb;
+}
+.rsvp-highlight .rsvp{
+  margin-top:26px;
+  background:var(--silver);
+  color:var(--navy);
+  border-color:var(--silver);
+}
+.rsvp-highlight .rsvp:hover{
+  background:#fff;
+}
+@media(max-width:800px){
+  .dress-highlight{
+    text-align:center;
+    flex-direction:column;
+    padding:26px 20px;
+  }
+  .rsvp-highlight{padding:36px 20px}
+}
