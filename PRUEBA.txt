@@ -1,0 +1,19 @@
+VERSIÓN DE PRUEBA — ARTEMIO 70
+
+1. Descomprime este ZIP.
+2. Para verla en tu computadora, abre index.html.
+3. Para Vercel, sube la carpeta completa del proyecto.
+4. La página entra directamente.
+5. La música intenta iniciar automáticamente. Si el navegador la bloquea, toca el botón ♪.
+6. El mismo botón pausa y reanuda la música.
+
+Esta versión conserva:
+- Sus raíces
+- Su familia
+- Viajes
+- Misa de acción de gracias
+- Celebración
+- Contador
+- Google Maps
+- Confirmación por WhatsApp
+- Mensajes privados por correo
