@@ -698,95 +698,70 @@ h1,h2,h3,.big-70,.hero-number,.countdown strong,.footer-title{font-family:"Playf
   .countdown span{font-size:.44rem!important;letter-spacing:.03em!important}
 }
 
-/* ===== V4.2 MENSAJES POR WHATSAPP ===== */
-.message-whatsapp-card{
-  max-width:780px;
-  margin:auto;
-  padding:54px 30px 48px;
-  text-align:center;
-  position:relative;
-  background:
-    radial-gradient(circle at 50% 0%,rgba(255,255,255,.94),transparent 38%),
-    linear-gradient(180deg,#faf6ee,#ece2d2);
-  border:1px solid #a8b1be;
-  border-radius:24px;
-  box-shadow:0 22px 55px rgba(0,0,0,.18);
+/* ===== AJUSTES FINALES ===== */
+:root{
+  --navy:#031124;
+  --navy2:#08294d;
+  --silver:#d9dee6;
+  --silver2:#aeb8c6;
 }
-.message-whatsapp-card::before{
+body{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(36,70,112,.24),transparent 32%),
+    linear-gradient(180deg,#031124,#061a34 55%,#020a15);
+}
+.section-transition{
+  opacity:0;
+  transform:translateY(34px);
+  transition:opacity .9s ease,transform .9s cubic-bezier(.2,.75,.2,1);
+}
+.section-transition.visible{opacity:1;transform:none}
+.section-transition::after{
   content:"";
   position:absolute;
-  inset:13px;
-  border:1px solid rgba(120,132,148,.42);
-  border-radius:18px;
-  pointer-events:none;
+  left:12%;right:12%;bottom:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(215,222,230,.48),transparent);
 }
-.message-monogram{
-  position:relative;
-  z-index:2;
-  width:68px;
-  height:68px;
-  margin:0 auto 18px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  border:1px solid #8f9aa8;
-  color:#596574;
-  font-family:"Playfair Display",Georgia,serif;
-  letter-spacing:.08em;
-  background:rgba(255,255,255,.5);
+.reveal-soft{
+  opacity:0;
+  transform:translateY(24px) scale(.992);
+  transition:opacity .75s ease,transform .75s cubic-bezier(.2,.75,.2,1);
 }
-.message-whatsapp-card .eyebrow{
-  position:relative;
-  z-index:2;
-  color:#66717f;
+.reveal-soft.visible{opacity:1;transform:none}
+
+/* Vestimenta más sutil */
+.dress-subtle{max-width:700px;padding:30px 24px}
+.hanger-icon{width:34px;height:25px;margin-bottom:12px}
+.dress-subtle h3{font-size:clamp(2rem,4.5vw,3rem)}
+.dress-subtle .dress-copy{max-width:500px;font-size:.9rem}
+
+/* Contador compacto en una sola línea */
+.countdown{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:5px!important;
+  max-width:540px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
 }
-.message-whatsapp-card h2{
-  position:relative;
-  z-index:2;
-  color:#07182f;
-  margin:8px 0 12px;
+.countdown div{min-width:0!important;padding:9px 2px!important}
+.countdown strong{
+  font-size:clamp(1.35rem,4.4vw,1.95rem)!important;
+  line-height:1!important;
 }
-.message-divider{
-  position:relative;
-  z-index:2;
-  width:94px;
-  height:1px;
-  margin:17px auto 22px;
-  background:linear-gradient(90deg,transparent,#7f8b99,transparent);
+.countdown span{
+  display:block!important;
+  margin-top:4px!important;
+  font-size:clamp(.4rem,1.4vw,.56rem)!important;
+  letter-spacing:.03em!important;
+  white-space:nowrap!important;
 }
-.message-intro{
-  position:relative;
-  z-index:2;
-  max-width:580px;
-  margin:0 auto;
-  color:#4e5967;
-}
-.message-whatsapp-button{
-  position:relative;
-  z-index:2;
-  display:inline-block;
-  margin-top:28px;
-  padding:16px 25px;
-  border:1px solid #d8dde5;
-  border-radius:10px;
-  color:#07182f;
-  text-decoration:none;
-  font-family:"Montserrat",Arial,sans-serif;
-  font-size:.76rem;
-  font-weight:600;
-  letter-spacing:.08em;
-  background:linear-gradient(180deg,#f4f6f9 0%,#cfd5dd 48%,#aeb7c4 100%);
-  box-shadow:0 10px 24px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.95);
-  transition:transform .2s ease,filter .2s ease;
-}
-.message-whatsapp-button:hover,
-.message-whatsapp-button:focus-visible{
-  transform:translateY(-2px);
-  filter:brightness(1.05);
-}
-.message-whatsapp-card .privacy-note{
-  position:relative;
-  z-index:2;
-  margin-top:17px;
-  color:#697586;
+
+/* Confirmación sin AP */
+.rsvp-premium{padding-top:44px}
+
+@media(max-width:420px){
+  .countdown{gap:3px!important}
+  .countdown div{padding:8px 1px!important}
+  .countdown strong{font-size:1.28rem!important}
+  .countdown span{font-size:.38rem!important}
 }

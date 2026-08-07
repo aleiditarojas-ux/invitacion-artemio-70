@@ -45,7 +45,7 @@
       </figure>
     </section>
 
-    <section class="section roots reveal">
+    <section class="section section-transition roots reveal">
       <div class="two-column">
         <figure class="photo-frame vintage ornate-frame ornate-roots">
           <img src="mama.webp" alt="Artemio junto a su mamá" loading="lazy">
@@ -59,7 +59,7 @@
       </div>
     </section>
 
-    <section class="section family reveal">
+    <section class="section section-transition family reveal">
       <div class="two-column reverse-mobile">
         <div>
           <p class="eyebrow">SU FAMILIA</p>
@@ -73,7 +73,7 @@
       </div>
     </section>
 
-    <section class="section travel reveal">
+    <section class="section section-transition travel reveal">
       <div class="wide">
                 <h2>Cada momento ha sido parte del viaje</h2>
         <p>Los viajes, las experiencias y las personas que he conocido han dejado huella en mi vida y me han enseñado a valorar cada instante.</p>
@@ -83,13 +83,13 @@
       </div>
     </section>
 
-    <section class="section celebration reveal">
+    <section class="section section-transition celebration reveal">
       <div class="centered">
         <p class="eyebrow">LA CELEBRACIÓN</p>
         <h2>Nos encantará contar con tu presencia</h2>
         <p class="date large-date">17 · OCTUBRE · 2026</p>
 
-        <div class="countdown" aria-live="polite">
+        <div class="countdown reveal-soft" aria-live="polite">
           <div><strong id="days">00</strong><span>Días</span></div>
           <div><strong id="hours">00</strong><span>Horas</span></div>
           <div><strong id="minutes">00</strong><span>Minutos</span></div>
@@ -99,7 +99,7 @@
         <div class="event-grid">
           <article class="event-card">
             <p class="eyebrow">4:00 P. M.</p>
-            <h3>Misa de acción de gracias</h3>
+            <h3>MISA DE ACCIÓN DE GRACIAS</h3>
             <p><strong>Parroquia de San Antonio de Padua</strong></p>
             <p>Calle 9 y Avenida 6, Las Águilas<br>Ciudad Nezahualcóyotl</p>
             <a class="button button-outline" href="https://maps.app.goo.gl/9hUwuPaZUmBEPZbs9" target="_blank" rel="noopener">CÓMO LLEGAR</a>
@@ -107,7 +107,7 @@
 
           <article class="event-card">
             <p class="eyebrow">6:00 P. M.</p>
-            <h3>Celebración</h3>
+            <h3>CELEBRACIÓN</h3>
             <p><strong>Salón Jessy</strong></p>
             <p>Agustín de Iturbide 41 y 43, Loma Bonita<br>Ciudad Nezahualcóyotl</p>
             <a class="button button-outline" href="https://maps.app.goo.gl/GD8AwBpB9tei3PE9A" target="_blank" rel="noopener">CÓMO LLEGAR</a>
@@ -119,7 +119,7 @@
         
         
         
-        <section class="dress-premium dress-subtle reveal-card" aria-labelledby="dress-premium-title">
+        <section class="dress-premium dress-subtle reveal-card reveal-soft" aria-labelledby="dress-premium-title">
           <span class="ornament corner tl" aria-hidden="true">❧</span>
           <span class="ornament corner tr" aria-hidden="true">❧</span>
           <span class="ornament corner bl" aria-hidden="true">❧</span>
@@ -147,10 +147,9 @@
 
 
         
-        <section class="rsvp-premium reveal-card" aria-labelledby="rsvp-premium-title">
+        <section class="rsvp-premium reveal-card reveal-soft" aria-labelledby="rsvp-premium-title">
           <span class="rsvp-corner one" aria-hidden="true">✧</span>
           <span class="rsvp-corner two" aria-hidden="true">✧</span>
-          <div class="rsvp-monogram" aria-hidden="true">AP</div>
           <h3 id="rsvp-premium-title">¿Nos acompañas?</h3>
           <div class="rsvp-divider" aria-hidden="true"></div>
           <p>Tu presencia hará aún más especial esta celebración. Por favor confirma tu asistencia.</p>
@@ -163,21 +162,31 @@
       </div>
     </section>
 
-    
-    <section class="section messages reveal">
-      <div class="message-wrap message-whatsapp-card">
-        <div class="message-monogram" aria-hidden="true">AP</div>
+    <section class="section section-transition messages reveal">
+      <div class="message-wrap">
         <p class="eyebrow">UNAS PALABRAS PARA ARTEMIO</p>
-        <h2>Dedícale un mensaje</h2>
-        <div class="message-divider" aria-hidden="true"></div>
-        <p class="message-intro">Si deseas compartirle unas palabras especiales, puedes enviarlas directamente por WhatsApp.</p>
-        <a class="message-whatsapp-button" href="https://wa.me/525554790912?text=Hola%2C%20quiero%20dejar%20unas%20palabras%20para%20Artemio%3A%0A%0ANombre%3A%0A%0AMensaje%3A" target="_blank" rel="noopener">
-          DEJAR UN MENSAJE PARA ARTEMIO
-        </a>
-        <p class="privacy-note">El mensaje llegará de forma privada al mismo WhatsApp de confirmación.</p>
+        <h2>Comparte un mensaje personal</h2>
+        <p>Tu mensaje será privado y llegará directamente al correo de la familia.</p>
+
+        
+        <form id="messageForm" class="message-form reveal-soft">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="from_name" type="text" required maxlength="80" autocomplete="name">
+
+          <label for="mensaje">Mensaje para Artemio</label>
+          <textarea id="mensaje" name="message" required maxlength="1500"></textarea>
+
+          <input type="hidden" name="to_email" value="aleidita.rojas@gmail.com">
+          <input type="hidden" name="event_name" value="70 años de Artemio Pérez Becerril">
+
+          <button id="messageSubmit" class="button button-dark" type="submit">ENVIAR MENSAJE</button>
+          <p id="messageStatus" class="message-status" aria-live="polite"></p>
+        </form>
+
+
+        <p class="privacy-note">El mensaje no se publicará en la invitación.</p>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -185,6 +194,9 @@
     <p>Tu presencia hará de este día un recuerdo inolvidable.</p>
     <p class="music-credit">Música: <em>Canon en Re mayor</em>, Johann Pachelbel · transcripción para piano interpretada por Lee Galloway · CC BY-SA 3.0 / GFDL.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="emailjs-config.js"></script>
   <script src="script.js"></script>
 
   <div id="thanksModal" class="thanks-modal" aria-hidden="true">
@@ -194,7 +206,7 @@
       <p class="eyebrow">GRACIAS POR TUS PALABRAS</p>
       <h2 id="thanksTitle">¡Muchas gracias!</h2>
       <div class="thanks-line"></div>
-      <p>Tus palabras para Artemio han sido enviadas de forma privada a la familia. Gracias por dedicarle un momento tan especial.</p>
+      <p>Tus palabras han sido enviadas correctamente. Gracias por compartir un mensaje tan especial para Artemio.</p>
       <button id="closeThanks" class="button button-dark" type="button">CERRAR</button>
     </div>
   </div>

@@ -1,16 +1,20 @@
-INVITACIÓN ARTEMIO — VERSIÓN 4.2 WHATSAPP
+INVITACIÓN ARTEMIO — VERSIÓN FINAL CON EMAILJS
 
-Cambios:
-- Se eliminó EmailJS.
-- Se eliminó el formulario por correo.
-- Confirmación de asistencia sigue por WhatsApp.
-- Se agregó una sección independiente para dejar un mensaje personal a Artemio.
-- Ambos botones abren el mismo WhatsApp, pero con textos distintos.
-- Los mensajes personales llegan de forma privada al número +52 55 5479 0912.
+Incluye:
+- EmailJS ya configurado.
+- Mensajes a aleidita.rojas@gmail.com.
+- Ventana de agradecimiento tras un envío exitoso.
+- Sin FormSubmit.
+- Se quitó AP.
+- MISA DE ACCIÓN DE GRACIAS y CELEBRACIÓN en mayúsculas.
+- Más transiciones.
+- Casual Elegante más sutil con icono pequeño de gancho.
+- Contador compacto en una sola línea en celular.
+- Botón CONFIRMO MI ASISTENCIA sin palomita.
 
-PARA ACTUALIZAR EN GITHUB:
+Para actualizar:
 1. Descomprime este ZIP.
 2. GitHub > invitacion-artemio-70 > Add file > Upload files.
 3. Sube todos los archivos.
 4. Commit changes.
-5. Vercel actualizará automáticamente el mismo enlace.
+5. Vercel actualizará automáticamente.
