@@ -230,3 +230,49 @@ footer{padding:62px 20px;text-align:center;background:#020912}
   }
   .rsvp-highlight{padding:36px 20px}
 }
+
+/* Ajustes finales solicitados */
+.dress-highlight{
+  background:linear-gradient(180deg,#f7f2e8,#efe7d8);
+  color:var(--navy);
+  border-left:0;
+  border:1px solid rgba(145,155,171,.65);
+  border-radius:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.16);
+}
+.dress-highlight .eyebrow{
+  color:#5f6976;
+}
+.dress-highlight h3{
+  color:var(--navy);
+}
+.dress-highlight p:last-child{
+  color:#4b5664;
+}
+.dress-symbol{
+  border-color:#8994a5;
+  color:#6e7988;
+  background:rgba(255,255,255,.42);
+}
+.rsvp-highlight{
+  background:linear-gradient(180deg,#0d2b50,#07182f);
+  border:1px solid rgba(201,206,216,.72);
+  border-radius:18px;
+  box-shadow:0 16px 38px rgba(0,0,0,.26);
+}
+.rsvp-highlight h3{
+  color:#fff;
+}
+.rsvp-highlight p{
+  color:#e7ebf0!important;
+}
+.rsvp-highlight .rsvp{
+  background:linear-gradient(180deg,#cfd4dc,#aeb7c4);
+  color:#07182f;
+  border-color:#dce0e6;
+  border-radius:8px;
+  box-shadow:0 7px 18px rgba(0,0,0,.18);
+}
+.rsvp-highlight .rsvp:hover{
+  background:#fff;
+}

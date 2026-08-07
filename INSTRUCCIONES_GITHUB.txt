@@ -1,34 +1,17 @@
-INVITACIÓN ARTEMIO — ARCHIVOS LISTOS PARA GITHUB
+VERSIÓN FINAL AJUSTADA
 
-IMPORTANTE:
-Todos los archivos están ahora en UNA SOLA CARPETA.
-No necesitas crear carpetas img ni audio.
+Cambios incluidos:
+- Código de vestimenta: Casual Elegante.
+- Tarjeta marfil para código de vestimenta.
+- Sección independiente azul marino/plateada para ¿Nos acompañas?
+- Se eliminó el texto "Confirmación de asistencia".
+- Botón: CONFIRMO MI ASISTENCIA.
+- Se conserva el formulario privado y gracias.html.
 
-SUBIR A GITHUB:
-1. Abre el repositorio invitacion-artemio-70.
-2. Ve a Add file > Upload files.
-3. Elimina de GitHub los archivos viejos si vas a reemplazarlos, o sube estos con el mismo nombre.
-4. En esta carpeta, presiona Ctrl + A.
-5. Arrastra TODOS los archivos a GitHub.
-6. Haz Commit changes.
-
-DEBES VER EN GITHUB:
-index.html
-style.css
-script.js
-favicon.png
-artemio.webp
-mama.webp
-familia.webp
-viaje.webp
-preview-whatsapp.jpg
-
-MÚSICA:
-La invitación usa Canon en Re mayor desde Wikimedia Commons.
-Con Internet puede reproducirse. Muchos celulares bloquean el inicio automático;
-si pasa eso, el invitado solo debe tocar el botón ♪.
-
-VERCEL:
-Después del Commit, importa invitacion-artemio-70 en Vercel y pulsa Deploy.
-
-NUEVO: gracias.html muestra una confirmación elegante después de enviar un mensaje y regresa automáticamente a la invitación.
+PARA ACTUALIZAR:
+1. Descomprime este ZIP.
+2. En GitHub abre invitacion-artemio-70.
+3. Add file > Upload files.
+4. Selecciona todos los archivos de esta carpeta.
+5. Súbelos y haz Commit changes.
+6. Vercel actualizará automáticamente el mismo enlace.
