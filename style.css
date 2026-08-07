@@ -562,3 +562,79 @@ footer{padding:62px 20px;text-align:center;background:#020912}
     padding-right:16px;
   }
 }
+
+/* ===== V4 PREMIUM ===== */
+:root{
+  --navy:#041326; --navy-2:#0a284b; --navy-3:#102f57;
+  --silver:#d7dbe2; --silver-mid:#a9b2bf; --silver-dark:#747f8e;
+  --ivory:#f6f0e5; --ivory-2:#e9dfce;
+}
+body{background:var(--navy);font-family:"Cormorant Garamond",Georgia,serif}
+h1,h2,h3,.big-70,.hero-number,.countdown strong,.footer-title{font-family:"Playfair Display",Georgia,serif}
+.eyebrow,.date,.button,.premium-rsvp-button,.message-form label,.countdown span{font-family:"Montserrat",Arial,sans-serif}
+.section{position:relative;overflow:hidden}
+.section::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.08;
+  background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.8) 1px,transparent 1.3px);
+  background-size:52px 52px
+}
+.family,.celebration{
+  background:radial-gradient(circle at 15% 10%,rgba(174,189,207,.10),transparent 27%),
+  linear-gradient(145deg,var(--navy),var(--navy-2) 58%,#061a32)
+}
+.travel,.messages{
+  background:radial-gradient(circle at 18% 15%,rgba(255,255,255,.82),transparent 30%),
+  linear-gradient(180deg,#f7f2e9,#e9dfce)
+}
+.ornate-frame{
+  position:relative;padding:14px;border:1px solid rgba(218,223,230,.9);
+  background:linear-gradient(135deg,#f7f8fa 0%,#8c97a6 24%,#e8ebef 48%,#7d8898 72%,#f4f6f9 100%);
+  box-shadow:0 24px 55px rgba(0,0,0,.30)
+}
+.ornate-frame::before,.ornate-frame::after{
+  content:"✦";position:absolute;z-index:2;width:34px;height:34px;display:grid;place-items:center;
+  color:#eef1f5;background:#536071;border:1px solid #d6dbe3;font-size:.8rem
+}
+.ornate-frame::before{top:-7px;left:-7px}
+.ornate-frame::after{bottom:-7px;right:-7px}
+.ornate-family{border-radius:22px 4px 22px 4px}
+.ornate-family img{border-radius:14px 2px 14px 2px}
+.ornate-travel{background:linear-gradient(120deg,#07182f,#cbd1da,#7d8898,#f4f6f9,#0d2b50)}
+.dress-illustration{
+  position:relative;z-index:2;max-width:520px;margin:0 auto 28px;padding:18px;border-radius:18px;
+  background:rgba(255,255,255,.45);border:1px solid rgba(129,140,155,.45);
+  box-shadow:inset 0 0 22px rgba(255,255,255,.55)
+}
+.dress-illustration svg{display:block;width:100%;height:auto}
+.dress-guidance{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:700px;margin:24px auto 0}
+.dress-guidance span{
+  display:block;padding:12px 14px;border-top:1px solid rgba(116,127,142,.5);color:#465363;
+  font-family:"Montserrat",Arial,sans-serif;font-size:.72rem;line-height:1.55
+}
+.rsvp-monogram{
+  position:relative;z-index:2;width:72px;height:72px;margin:0 auto 18px;display:grid;place-items:center;
+  border:1px solid rgba(218,223,230,.62);border-radius:50%;font-family:"Playfair Display",Georgia,serif;
+  font-size:1.25rem;letter-spacing:.08em;color:#eef1f5;
+  background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.11),transparent 38%),rgba(255,255,255,.035)
+}
+.reveal{opacity:0;transform:translateY(44px) scale(.985);filter:blur(3px);
+  transition:opacity 1s ease,transform 1s cubic-bezier(.2,.75,.2,1),filter 1s ease}
+.reveal.visible{opacity:1;transform:none;filter:none}
+.reveal-card{opacity:0;transform:translateY(36px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.75,.2,1)}
+.reveal-card.visible{opacity:1;transform:none}
+.message-sink{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;border:0}
+.thanks-modal{position:fixed;inset:0;z-index:9000;display:grid;place-items:center;padding:22px;opacity:0;visibility:hidden;transition:.35s}
+.thanks-modal.open{opacity:1;visibility:visible}
+.thanks-backdrop{position:absolute;inset:0;background:rgba(2,9,18,.78);backdrop-filter:blur(8px)}
+.thanks-card{
+  position:relative;z-index:2;width:min(100%,590px);padding:54px 30px 44px;text-align:center;color:#10223c;
+  background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.95),transparent 38%),linear-gradient(180deg,#faf6ee,#eee4d5);
+  border:1px solid #a9b2bf;border-radius:22px;box-shadow:0 28px 70px rgba(0,0,0,.45)
+}
+.thanks-card::before{content:"";position:absolute;inset:12px;border:1px solid rgba(120,132,148,.45);border-radius:16px}
+.thanks-emblem{width:58px;height:58px;margin:0 auto 16px;display:grid;place-items:center;border:1px solid #8f9aa8;border-radius:50%;color:#6d7887}
+.thanks-card h2{margin:8px 0 12px;color:#07182f}
+.thanks-card .eyebrow{color:#697586}
+.thanks-line{width:88px;height:1px;margin:18px auto;background:linear-gradient(90deg,transparent,#85909e,transparent)}
+.thanks-card p{color:#4d5968}
+@media(max-width:800px){.dress-guidance{grid-template-columns:1fr}.dress-illustration{padding:10px}.ornate-frame{padding:10px}}

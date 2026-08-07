@@ -18,6 +18,9 @@
 
   <link rel="icon" href="favicon.png">
   <link rel="preload" as="image" href="artemio.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,7 +47,7 @@
 
     <section class="section roots reveal">
       <div class="two-column">
-        <figure class="photo-frame vintage">
+        <figure class="photo-frame vintage ornate-frame ornate-roots">
           <img src="mama.webp" alt="Artemio junto a su mamá" loading="lazy">
         </figure>
         <div>
@@ -64,7 +67,7 @@
           <p>Mi familia ha sido la mayor bendición de mi vida. Compartir cada etapa con ellos ha dado sentido a este camino y hoy celebro rodeado de quienes más amo.</p>
           <blockquote>Los amo con todo mi corazón.</blockquote>
         </div>
-        <figure class="photo-frame">
+        <figure class="photo-frame ornate-frame ornate-family">
           <img src="familia.webp" alt="Artemio con su familia y sus hijos cuando eran pequeños" loading="lazy">
         </figure>
       </div>
@@ -72,10 +75,9 @@
 
     <section class="section travel reveal">
       <div class="wide">
-        <p class="eyebrow">MOMENTOS Y VIAJES</p>
-        <h2>Cada momento ha sido parte del viaje</h2>
+                <h2>Cada momento ha sido parte del viaje</h2>
         <p>Los viajes, las experiencias y las personas que he conocido han dejado huella en mi vida y me han enseñado a valorar cada instante.</p>
-        <figure class="photo-frame travel-photo">
+        <figure class="photo-frame travel-photo ornate-frame ornate-travel">
           <img src="viaje.webp" alt="Artemio contemplando un paisaje junto al lago" loading="lazy">
         </figure>
       </div>
@@ -115,15 +117,42 @@
         
         
         
-        <section class="dress-premium" aria-labelledby="dress-premium-title">
+        
+        <section class="dress-premium reveal-card" aria-labelledby="dress-premium-title">
           <span class="ornament corner tl" aria-hidden="true">❧</span>
           <span class="ornament corner tr" aria-hidden="true">❧</span>
           <span class="ornament corner bl" aria-hidden="true">❧</span>
           <span class="ornament corner br" aria-hidden="true">❧</span>
 
-          <div class="dress-emblem" aria-hidden="true">
-            <span class="hanger">⌁</span>
-            <span class="bow">✦</span>
+          <div class="dress-illustration" aria-hidden="true">
+            <svg viewBox="0 0 420 260" role="img" aria-label="Referencia de vestimenta casual elegante">
+              <defs>
+                <linearGradient id="silverSuit" x1="0" x2="1">
+                  <stop offset="0" stop-color="#e5e8ed"/>
+                  <stop offset=".45" stop-color="#9ca6b3"/>
+                  <stop offset="1" stop-color="#f6f7f9"/>
+                </linearGradient>
+                <linearGradient id="navyDress" x1="0" x2="1">
+                  <stop offset="0" stop-color="#07182f"/>
+                  <stop offset=".55" stop-color="#153b6a"/>
+                  <stop offset="1" stop-color="#06152a"/>
+                </linearGradient>
+              </defs>
+              <g transform="translate(62,26)">
+                <path d="M71 7 L42 35 L18 78 L33 91 L50 66 L52 218 L136 218 L136 66 L153 91 L168 78 L144 35 L115 7 L101 22 L85 22 Z"
+                      fill="url(#silverSuit)" stroke="#6f7b8a" stroke-width="2"/>
+                <path d="M85 22 L93 79 L101 22" fill="#ffffff" stroke="#7f8996" stroke-width="2"/>
+                <path d="M101 22 L109 79 L117 22" fill="#f9fafb" stroke="#7f8996" stroke-width="2"/>
+                <path d="M95 48 L88 63 L95 78 L102 63 Z" fill="#07182f"/>
+                <path d="M99 48 L106 63 L99 78 L92 63 Z" fill="#0d2b50"/>
+              </g>
+              <g transform="translate(238,28)">
+                <path d="M72 7 C60 30,54 45,52 63 C49 87,34 120,18 194 C54 214,111 214,148 194 C131 121,116 87,114 63 C112 45,106 30,94 7 Z"
+                      fill="url(#navyDress)" stroke="#c9ced8" stroke-width="2.2"/>
+                <path d="M72 7 C77 24,88 24,94 7" fill="none" stroke="#d7dce3" stroke-width="2"/>
+                <path d="M57 55 C74 69,91 69,109 55" fill="none" stroke="#b8c1cd" stroke-width="1.7"/>
+              </g>
+            </svg>
           </div>
 
           <div class="ornamental-heading">
@@ -131,25 +160,29 @@
             <p class="eyebrow">CÓDIGO DE VESTIMENTA</p>
             <span></span>
           </div>
-
           <h3 id="dress-premium-title">Casual Elegante</h3>
           <div class="mini-flourish" aria-hidden="true">— ✦ —</div>
           <p class="dress-copy">Luce cómodo y con un toque de elegancia para compartir esta ocasión tan especial.</p>
+          <div class="dress-guidance">
+            <span>Caballeros: camisa, pantalón de vestir o saco ligero</span>
+            <span>Damas: vestido, conjunto o atuendo elegante y cómodo</span>
+          </div>
         </section>
 
-        <section class="rsvp-premium" aria-labelledby="rsvp-premium-title">
+
+        
+        <section class="rsvp-premium reveal-card" aria-labelledby="rsvp-premium-title">
           <span class="rsvp-corner one" aria-hidden="true">✧</span>
           <span class="rsvp-corner two" aria-hidden="true">✧</span>
-          <div class="rsvp-heart" aria-hidden="true">♥</div>
+          <div class="rsvp-monogram" aria-hidden="true">AP</div>
           <h3 id="rsvp-premium-title">¿Nos acompañas?</h3>
           <div class="rsvp-divider" aria-hidden="true"></div>
           <p>Tu presencia hará aún más especial esta celebración. Por favor confirma tu asistencia.</p>
           <a class="premium-rsvp-button"
              href="https://wa.me/525554790912?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20celebraci%C3%B3n%20de%20los%2070%20a%C3%B1os%20de%20Artemio%20P%C3%A9rez%20Becerril."
-             target="_blank" rel="noopener">
-             <span aria-hidden="true">✓</span> CONFIRMO MI ASISTENCIA
-          </a>
+             target="_blank" rel="noopener"><span aria-hidden="true">✓</span> CONFIRMO MI ASISTENCIA</a>
         </section>
+
 
       </div>
     </section>
@@ -160,9 +193,9 @@
         <h2>Comparte un mensaje personal</h2>
         <p>Tu mensaje será privado y llegará directamente al correo de la familia.</p>
 
-        <form action="https://formsubmit.co/rockredz1956@gmail.com" method="POST" class="message-form">
+        <form id="messageForm" action="https://formsubmit.co/rockredz1956@gmail.com" method="POST" target="messageSink" class="message-form">
+
           <input type="hidden" name="_subject" value="Nuevo mensaje para Artemio">
-          <input type="hidden" name="_next" value="https://invitacion-artemio-70.vercel.app/gracias.html">
           <input type="hidden" name="_captcha" value="true">
           <input type="hidden" name="_template" value="table">
           <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off">
@@ -174,7 +207,9 @@
           <textarea id="mensaje" name="Mensaje para Artemio" required maxlength="1500"></textarea>
 
           <button class="button button-dark" type="submit">ENVIAR MENSAJE</button>
+        
         </form>
+        <iframe name="messageSink" id="messageSink" class="message-sink" title="Envío de mensaje"></iframe>
 
         <p class="privacy-note">El mensaje no se publicará en la invitación.</p>
       </div>
@@ -188,5 +223,18 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <div id="thanksModal" class="thanks-modal" aria-hidden="true">
+    <div class="thanks-backdrop"></div>
+    <div class="thanks-card" role="dialog" aria-modal="true" aria-labelledby="thanksTitle">
+      <div class="thanks-emblem">♥</div>
+      <p class="eyebrow">MENSAJE ENVIADO</p>
+      <h2 id="thanksTitle">¡Muchas gracias!</h2>
+      <div class="thanks-line"></div>
+      <p>Tu mensaje para Artemio ha sido enviado de forma privada a la familia.</p>
+      <button id="closeThanks" class="button button-dark" type="button">CERRAR</button>
+    </div>
+  </div>
+
 </body>
 </html>

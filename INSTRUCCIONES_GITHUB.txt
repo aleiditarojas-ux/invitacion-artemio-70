@@ -1,18 +1,25 @@
-VERSIÓN PREMIUM — VESTIMENTA Y CONFIRMACIÓN
+INVITACIÓN ARTEMIO — VERSIÓN 4.0 PREMIUM
 
-Cambios principales:
-- Tarjeta marfil premium con textura, doble borde y ornamentos.
-- Ícono decorativo en Código de vestimenta.
-- Casual Elegante con tipografía grande.
-- Separadores ornamentales.
-- Sección ¿Nos acompañas? en azul marino con detalles plateados.
-- Botón metálico: CONFIRMO MI ASISTENCIA.
-- Diseño responsive para celular.
+Incluye:
+- Ilustración referencial de vestimenta Casual Elegante (traje + vestido).
+- Tarjeta marfil con doble marco y ornamentos.
+- Confirmación azul marino/plateada con monograma AP.
+- Botón premium CONFIRMO MI ASISTENCIA.
+- Marcos ornamentales distintos para mamá, familia y viaje.
+- Tipografías Playfair Display, Cormorant Garamond y Montserrat.
+- Transiciones visibles entre secciones.
+- Se eliminó únicamente el rótulo MOMENTOS Y VIAJES.
+- Modal elegante de agradecimiento después de enviar un mensaje.
+
+IMPORTANTE SOBRE MENSAJES:
+Esta versión conserva FormSubmit para el envío real del correo, pero el envío se
+hace en segundo plano y el invitado ve un agradecimiento dentro de la invitación.
+Para que el correo llegue de verdad, FormSubmit todavía debe estar activado para
+rockredz1956@gmail.com.
 
 PARA ACTUALIZAR:
 1. Descomprime este ZIP.
-2. En GitHub abre invitacion-artemio-70.
-3. Add file > Upload files.
-4. Selecciona todos los archivos de esta carpeta.
-5. Súbelos y haz Commit changes.
-6. Vercel actualizará automáticamente el mismo enlace.
+2. GitHub > invitacion-artemio-70 > Add file > Upload files.
+3. Selecciona todos los archivos y súbelos.
+4. Commit changes.
+5. Vercel actualizará automáticamente el mismo enlace.
