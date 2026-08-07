@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     music.volume = 0.26;
@@ -78,31 +77,3 @@ const revealCardObserver = new IntersectionObserver((entries)=>{
   });
 },{threshold:.16});
 document.querySelectorAll('.reveal-card').forEach(el=>revealCardObserver.observe(el));
-
-const messageFormV4 = document.getElementById('messageForm');
-const thanksModalV4 = document.getElementById('thanksModal');
-const closeThanksV4 = document.getElementById('closeThanks');
-
-function showThanksV4(){
-  if(!thanksModalV4) return;
-  thanksModalV4.classList.add('open');
-  thanksModalV4.setAttribute('aria-hidden','false');
-}
-function hideThanksV4(){
-  if(!thanksModalV4) return;
-  thanksModalV4.classList.remove('open');
-  thanksModalV4.setAttribute('aria-hidden','true');
-}
-if(messageFormV4){
-  messageFormV4.addEventListener('submit', ()=>{
-    setTimeout(()=>{
-      showThanksV4();
-      messageFormV4.reset();
-    },450);
-  });
-}
-if(closeThanksV4) closeThanksV4.addEventListener('click',hideThanksV4);
-if(thanksModalV4){
-  const bd=thanksModalV4.querySelector('.thanks-backdrop');
-  if(bd) bd.addEventListener('click',hideThanksV4);
-}
