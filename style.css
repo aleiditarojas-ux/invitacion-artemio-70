@@ -975,3 +975,35 @@ main{width:100%;max-width:100%}
     font-size:.72rem !important;
   }
 }
+
+/* ===== V6.1 BOTÓN CÓMO LLEGAR EN SU PROPIA FILA ===== */
+.event-time-bottom{
+  display:block !important;
+  width:max-content;
+  max-width:100%;
+  margin:16px auto 12px !important;
+}
+
+.event-map-row{
+  display:block !important;
+  width:100% !important;
+  clear:both !important;
+  margin-top:8px !important;
+  text-align:center !important;
+}
+
+.event-map-row .button{
+  display:inline-block !important;
+  width:auto !important;
+  min-width:230px;
+  max-width:100%;
+  margin:0 auto !important;
+  box-sizing:border-box;
+}
+
+@media(max-width:520px){
+  .event-map-row .button{
+    min-width:0;
+    width:min(100%,260px) !important;
+  }
+}

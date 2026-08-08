@@ -1,15 +1,10 @@
-INVITACIÓN ARTEMIO — VERSIÓN 6 FINAL MOBILE
+INVITACIÓN ARTEMIO — VERSIÓN 6.1
 
-Cambios:
-- 4:00 P. M. ahora está debajo de la dirección de la MISA.
-- 6:00 P. M. ahora está debajo de la dirección de la CELEBRACIÓN.
-- CÓMO LLEGAR queda debajo del horario.
-- Todas las transiciones son únicamente de abajo hacia arriba.
-- Se eliminaron movimientos laterales.
-- Tarjetas más compactas en celular.
-- Contador más compacto.
-- Botón de música se dejó exactamente donde estaba.
-- Se conserva EmailJS y el mensaje de agradecimiento.
+Cambio puntual:
+- El horario queda en una línea independiente debajo del lugar.
+- Debajo del horario aparece SOLO el botón CÓMO LLEGAR dentro de su propio cuadro.
+- No se modificó el botón de música.
+- Se conservan las transiciones verticales, EmailJS y el resto de la versión 6.
 
 PARA SUBIR:
 1. Descomprime este ZIP.
@@ -17,5 +12,5 @@ PARA SUBIR:
 3. Sube todos los archivos y reemplaza los existentes.
 4. Commit changes.
 5. Espera a que Vercel diga Ready.
-6. En el celular abre:
-   https://invitacion-artemio-70.vercel.app/?v=60
+6. Prueba en celular con:
+   https://invitacion-artemio-70.vercel.app/?v=61
