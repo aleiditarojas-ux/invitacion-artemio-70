@@ -1,17 +1,21 @@
-INVITACIÓN ARTEMIO — VERSIÓN 5.2
+INVITACIÓN ARTEMIO — VERSIÓN 6 FINAL MOBILE
 
 Cambios:
-- Horario de MISA DE ACCIÓN DE GRACIAS debajo del lugar/dirección.
-- Horario de CELEBRACIÓN debajo del lugar/dirección.
-- Más transiciones entre bloques y secciones.
-- Transiciones seguras para celular: el contenido nunca queda oculto.
-- Mantiene EmailJS y los ajustes Mobile Safe.
+- 4:00 P. M. ahora está debajo de la dirección de la MISA.
+- 6:00 P. M. ahora está debajo de la dirección de la CELEBRACIÓN.
+- CÓMO LLEGAR queda debajo del horario.
+- Todas las transiciones son únicamente de abajo hacia arriba.
+- Se eliminaron movimientos laterales.
+- Tarjetas más compactas en celular.
+- Contador más compacto.
+- Botón de música se dejó exactamente donde estaba.
+- Se conserva EmailJS y el mensaje de agradecimiento.
 
 PARA SUBIR:
 1. Descomprime este ZIP.
 2. GitHub > invitacion-artemio-70 > Add file > Upload files.
-3. Sube todos los archivos.
+3. Sube todos los archivos y reemplaza los existentes.
 4. Commit changes.
-5. Espera a que Vercel muestre Ready.
-6. Prueba en celular con:
-   https://invitacion-artemio-70.vercel.app/?v=52
+5. Espera a que Vercel diga Ready.
+6. En el celular abre:
+   https://invitacion-artemio-70.vercel.app/?v=60

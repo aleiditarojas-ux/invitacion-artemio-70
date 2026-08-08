@@ -899,62 +899,79 @@ main{width:100%;max-width:100%}
   .message-form{width:100%!important}
 }
 
-/* ===== V5.2 HORARIOS + TRANSICIONES ===== */
-.event-card .event-time,
-.event-card .time{
-  margin-top:14px!important;
-  padding-top:12px!important;
-  border-top:1px solid rgba(215,222,230,.28);
+/* ===== V6 FINAL MOBILE ===== */
+
+/* Horarios debajo del lugar */
+.event-time-bottom{
+  display:inline-block;
+  margin:17px auto 17px !important;
+  padding:9px 18px !important;
+  border-top:1px solid rgba(215,222,230,.34);
+  border-bottom:1px solid rgba(215,222,230,.18);
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:.78rem !important;
   font-weight:600;
-  letter-spacing:.04em;
+  letter-spacing:.18em;
+  color:#f1f3f6 !important;
 }
 
-.slide-reveal{
-  opacity:1;
-  transform:none;
+/* Tarjetas más compactas */
+.event-card-mobile{
+  padding-top:30px !important;
+  padding-bottom:30px !important;
 }
-.slide-reveal.enter-from-right{animation:slideFromRight .8s cubic-bezier(.2,.75,.2,1) both}
-.slide-reveal.enter-from-left{animation:slideFromLeft .8s cubic-bezier(.2,.75,.2,1) both}
-.slide-reveal.enter-from-bottom{animation:slideFromBottom .8s cubic-bezier(.2,.75,.2,1) both}
+.event-card-mobile .elegant-event-icon{margin-bottom:14px !important}
+.event-card-mobile h3{margin:4px 0 20px !important}
 
-@keyframes slideFromRight{
-  from{opacity:.15;transform:translateX(34px) scale(.99);filter:blur(2px)}
-  to{opacity:1;transform:none;filter:none}
+/* Transiciones exclusivamente de abajo hacia arriba.
+   El contenido permanece visible si JS no ejecuta. */
+.vertical-reveal,
+.vertical-item{
+  opacity:1 !important;
+  transform:none !important;
+  visibility:visible !important;
+  filter:none !important;
 }
-@keyframes slideFromLeft{
-  from{opacity:.15;transform:translateX(-34px) scale(.99);filter:blur(2px)}
-  to{opacity:1;transform:none;filter:none}
+.vertical-reveal.animate-up,
+.vertical-item.animate-up{
+  animation:onlyUp .72s cubic-bezier(.2,.75,.2,1) both;
 }
-@keyframes slideFromBottom{
-  from{opacity:.15;transform:translateY(30px) scale(.99);filter:blur(2px)}
-  to{opacity:1;transform:none;filter:none}
+@keyframes onlyUp{
+  from{opacity:.18;transform:translateY(26px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
-.section-transition::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:8%;
-  right:8%;
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(217,222,230,.45),transparent);
-  opacity:.7;
+/* Contador todavía más compacto */
+.countdown{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:3px !important;
+  max-width:500px !important;
+}
+.countdown div{min-width:0 !important;padding:7px 1px !important}
+.countdown strong{font-size:clamp(1.12rem,4.6vw,1.65rem) !important}
+.countdown span{
+  font-size:clamp(.34rem,1.2vw,.48rem) !important;
+  white-space:nowrap !important;
+  letter-spacing:.02em !important;
 }
 
 @media(max-width:520px){
-  .slide-reveal.enter-from-right{animation-name:slideFromRightMobile}
-  .slide-reveal.enter-from-left{animation-name:slideFromLeftMobile}
-  .slide-reveal.enter-from-bottom{animation-name:slideFromBottomMobile}
-}
-@keyframes slideFromRightMobile{
-  from{opacity:.2;transform:translateX(18px)}
-  to{opacity:1;transform:none}
-}
-@keyframes slideFromLeftMobile{
-  from{opacity:.2;transform:translateX(-18px)}
-  to{opacity:1;transform:none}
-}
-@keyframes slideFromBottomMobile{
-  from{opacity:.2;transform:translateY(18px)}
-  to{opacity:1;transform:none}
+  .event-grid{gap:22px !important}
+  .event-card-mobile{
+    padding:26px 16px !important;
+    min-height:0 !important;
+  }
+  .event-card-mobile h3{
+    font-size:clamp(2rem,9vw,3.25rem) !important;
+    line-height:1.08 !important;
+  }
+  .event-card-mobile p{
+    margin-top:9px !important;
+    margin-bottom:9px !important;
+  }
+  .event-time-bottom{
+    margin-top:15px !important;
+    margin-bottom:16px !important;
+    font-size:.72rem !important;
+  }
 }
