@@ -766,59 +766,44 @@ body{
   .countdown span{font-size:.38rem!important}
 }
 
-/* === Correcciones finales de revisión === */
-.countdown{
-  grid-template-columns:repeat(4,minmax(0,1fr))!important;
-  gap:4px!important;
-  max-width:520px!important;
-  margin-left:auto!important;
-  margin-right:auto!important;
-}
-.countdown div{padding:8px 2px!important;min-width:0!important}
-.countdown strong{font-size:clamp(1.25rem,4.4vw,1.9rem)!important;line-height:1!important}
-.countdown span{
-  font-size:clamp(.38rem,1.35vw,.54rem)!important;
-  letter-spacing:.02em!important;
-  white-space:nowrap!important;
-}
+/* === V5 MOBILE/STABILITY === */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,video{max-width:100%;height:auto}
+.section,.container,.wrap,.content{max-width:100%}
 
-/* Vestimenta más sutil */
-.dress-subtle{max-width:680px!important;padding:28px 22px!important}
-.hanger-icon{width:32px!important;height:24px!important;margin:0 auto 10px!important}
-.dress-guidance{display:none!important}
+/* compact countdown in one line */
+.countdown{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:3px!important;max-width:500px!important;margin-inline:auto!important;width:100%!important}
+.countdown div{min-width:0!important;padding:8px 1px!important}
+.countdown strong{font-size:clamp(1.18rem,4vw,1.8rem)!important;line-height:1!important}
+.countdown span{display:block!important;font-size:clamp(.34rem,1.25vw,.52rem)!important;letter-spacing:.01em!important;white-space:nowrap!important}
 
-/* Más transiciones */
-.section-transition{
-  opacity:0;
-  transform:translateY(34px);
-  transition:opacity .9s ease, transform .9s cubic-bezier(.2,.75,.2,1);
-}
+/* subtle dress code */
+.dress-premium,.dress-subtle{max-width:660px!important;padding:26px 18px!important}
+.hanger-icon{width:30px!important;height:22px!important;margin:0 auto 9px!important;color:#737f8e}
+.hanger-icon svg{width:100%;height:100%;display:block}
+.dress-copy{max-width:470px!important;font-size:.9rem!important}
+
+/* elegant event icons */
+.event-icon{width:40px;height:40px;margin:0 auto 12px;border:1px solid rgba(210,216,225,.7);border-radius:50%;display:grid;place-items:center;color:#d8dee7;font-family:Georgia,serif;background:rgba(255,255,255,.035)}
+.event-icon-church{font-size:1.15rem}
+.event-icon-toast{font-size:.9rem;letter-spacing:-.12em;padding-right:.1em}
+
+/* transitions */
+.section-transition{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.2,1)}
 .section-transition.visible{opacity:1;transform:none}
-.section-transition::after{
-  content:"";
-  position:absolute;left:12%;right:12%;bottom:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(217,222,230,.5),transparent);
-}
-.photo-frame,.event-card,.dress-premium,.rsvp-premium,.message-form{
-  transition:transform .7s ease, opacity .7s ease, box-shadow .7s ease;
-}
-.photo-frame:hover{transform:translateY(-3px) scale(1.01)}
+.section-transition::after{content:"";position:absolute;left:12%;right:12%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(215,222,230,.42),transparent)}
 
-/* Modal agradecimiento y cierre */
+/* modal must close reliably */
 .thanks-modal{pointer-events:none}
 .thanks-modal.open{pointer-events:auto}
-.thanks-card{position:relative;z-index:2}
 .thanks-backdrop{cursor:pointer}
-.message-status{
-  min-height:1.4em;
-  margin-top:10px;
-  font-size:.78rem;
-}
-.message-status.error{color:#8b3840}
-.message-status.sending{color:#66717f}
-@media(max-width:420px){
+.thanks-card{z-index:2;position:relative}
+#closeThanks{position:relative;z-index:3;cursor:pointer}
+
+@media(max-width:480px){
   .countdown{gap:2px!important}
-  .countdown div{padding:7px 1px!important}
-  .countdown strong{font-size:1.18rem!important}
-  .countdown span{font-size:.35rem!important}
+  .countdown div{padding:7px 0!important}
+  .countdown strong{font-size:1.08rem!important}
+  .countdown span{font-size:.32rem!important}
+  .event-icon{width:34px;height:34px;margin-bottom:9px}
 }

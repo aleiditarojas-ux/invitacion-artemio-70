@@ -1,27 +1,13 @@
-INVITACIÓN ARTEMIO — REVISIÓN FINAL
+INVITACIÓN ARTEMIO — V5 MOBILE
 
-Incluye:
-- EmailJS configurado.
-- Mensajes a aleidita.rojas@gmail.com.
-- El agradecimiento se cierra con CERRAR, clic fuera, tecla Esc o automáticamente a los 5 segundos.
-- Sin FormSubmit.
-- Se quitó AP.
-- MISA DE ACCIÓN DE GRACIAS y CELEBRACIÓN en mayúsculas.
+Cambios:
+- Ajustes para abrirse correctamente en celular.
+- EmailJS configurado y probado en código.
+- Modal de gracias cierra con botón, toque, fondo, Esc o a los 5 segundos.
+- Icono pequeño de iglesia en MISA DE ACCIÓN DE GRACIAS.
+- Icono pequeño de copas en CELEBRACIÓN.
+- Contador más pequeño, una sola línea en móvil.
+- Vestimenta más sutil.
 - Más transiciones.
-- Casual Elegante más sutil.
-- Contador compacto en una sola línea en celular.
-- Botón CONFIRMO MI ASISTENCIA sin palomita.
 
-Para publicar:
-1. Descomprime el ZIP.
-2. GitHub > invitacion-artemio-70 > Add file > Upload files.
-3. Sube todos los archivos.
-4. Commit changes.
-5. Espera a que Vercel actualice el mismo enlace.
-
-Prueba desde el celular:
-- contador en un renglón;
-- botón de música;
-- confirmación;
-- envío de palabras;
-- cerrar el mensaje de agradecimiento.
+SUBIR: GitHub > Add file > Upload files > subir todos > Commit changes. Vercel actualizará el mismo enlace.
