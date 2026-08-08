@@ -99,7 +99,13 @@
         <div class="event-grid">
           <article class="event-card">
             <p class="eyebrow">4:00 P. M.</p>
-            <div class="event-icon event-icon-church" aria-hidden="true">⌂</div><h3>MISA DE ACCIÓN DE GRACIAS</h3>
+            <div class="event-icon elegant-event-icon" aria-hidden="true">
+<svg viewBox="0 0 64 64">
+  <path d="M32 7v10M27 12h10M24 23l8-7 8 7v8h8v25H16V31h8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M27 56V42c0-4 2-7 5-7s5 3 5 7v14M12 56h40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M22 31h20" fill="none" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div><h3>MISA DE ACCIÓN DE GRACIAS</h3>
             <p><strong>Parroquia de San Antonio de Padua</strong></p>
             <p>Calle 9 y Avenida 6, Las Águilas<br>Ciudad Nezahualcóyotl</p>
             <a class="button button-outline" href="https://maps.app.goo.gl/9hUwuPaZUmBEPZbs9" target="_blank" rel="noopener">CÓMO LLEGAR</a>
@@ -107,7 +113,12 @@
 
           <article class="event-card">
             <p class="eyebrow">6:00 P. M.</p>
-            <div class="event-icon event-icon-toast" aria-hidden="true">♢♢</div><h3>CELEBRACIÓN</h3>
+            <div class="event-icon elegant-event-icon" aria-hidden="true">
+<svg viewBox="0 0 64 64">
+  <path d="M16 12h13l-2 17c-.5 4.5-3.6 8-7.5 8S12.5 33.5 12 29zM19.5 37v13M13 54h13M48 12H35l2 17c.5 4.5 3.6 8 7.5 8S51.5 33.5 52 29zM44.5 37v13M38 54h13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M27 24l10 5M37 24l-10 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+</div><h3>CELEBRACIÓN</h3>
             <p><strong>Salón Jessy</strong></p>
             <p>Agustín de Iturbide 41 y 43, Loma Bonita<br>Ciudad Nezahualcóyotl</p>
             <a class="button button-outline" href="https://maps.app.goo.gl/GD8AwBpB9tei3PE9A" target="_blank" rel="noopener">CÓMO LLEGAR</a>
@@ -195,9 +206,9 @@
     <p class="music-credit">Música: <em>Canon en Re mayor</em>, Johann Pachelbel · transcripción para piano interpretada por Lee Galloway · CC BY-SA 3.0 / GFDL.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="emailjs-config.js"></script>
-  <script src="script.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script defer src="emailjs-config.js"></script>
+  <script defer src="script.js"></script>
 
   <div id="thanksModal" class="thanks-modal" aria-hidden="true">
     <div class="thanks-backdrop"></div>
@@ -207,7 +218,7 @@
       <h2 id="thanksTitle">¡Muchas gracias!</h2>
       <div class="thanks-line"></div>
       <p>Tus palabras han sido enviadas correctamente. Gracias por compartir un mensaje tan especial para Artemio.</p>
-      <button id="closeThanks" class="button button-dark" type="button">CERRAR</button>
+      <button id="closeThanks" class="button button-dark" type="button" onclick="document.getElementById('thanksModal').classList.remove('open');document.getElementById('thanksModal').setAttribute('aria-hidden','true');">CERRAR</button>
     </div>
   </div>
 

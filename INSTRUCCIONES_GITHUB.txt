@@ -1,13 +1,21 @@
-INVITACIÓN ARTEMIO — V5 MOBILE
+VERSIÓN 5.1 MOBILE SAFE
 
-Cambios:
-- Ajustes para abrirse correctamente en celular.
-- EmailJS configurado y probado en código.
-- Modal de gracias cierra con botón, toque, fondo, Esc o a los 5 segundos.
-- Icono pequeño de iglesia en MISA DE ACCIÓN DE GRACIAS.
-- Icono pequeño de copas en CELEBRACIÓN.
-- Contador más pequeño, una sola línea en móvil.
-- Vestimenta más sutil.
-- Más transiciones.
+Cambios principales:
+- El contenido ya NO depende de JavaScript para hacerse visible.
+- Corrección específica para navegadores de celular y navegadores internos de WhatsApp.
+- Mantiene EmailJS funcionando.
+- El mensaje de gracias se cierra con el botón CERRAR, tocando fuera o automáticamente a los 5 segundos.
+- Icono pequeño y elegante de iglesia en MISA DE ACCIÓN DE GRACIAS.
+- Icono pequeño y elegante de copas en CELEBRACIÓN.
+- Contador compacto en una sola línea.
 
-SUBIR: GitHub > Add file > Upload files > subir todos > Commit changes. Vercel actualizará el mismo enlace.
+SUBIR:
+1. Descomprime el ZIP.
+2. GitHub > invitacion-artemio-70 > Add file > Upload files.
+3. Sube TODOS los archivos y reemplaza los existentes.
+4. Commit changes.
+5. Espera a que Vercel muestre el nuevo deployment como Ready.
+6. En el celular abre:
+   https://invitacion-artemio-70.vercel.app/?v=51
+
+El ?v=51 ayuda a evitar que el teléfono muestre una versión guardada en caché.

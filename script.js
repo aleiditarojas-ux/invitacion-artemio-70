@@ -83,51 +83,105 @@ document.querySelectorAll('.reveal-card').forEach(el=>revealCardObserver.observe
 
 
 
-// === V5 robust mobile + EmailJS ===
-document.addEventListener('DOMContentLoaded',()=>{
-  const targets=document.querySelectorAll('.section-transition,.reveal,.reveal-card,.reveal-soft');
-  if('IntersectionObserver' in window){
-    const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible','show');obs.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -10px 0px'});
-    targets.forEach(el=>obs.observe(el));
-  } else targets.forEach(el=>el.classList.add('visible','show'));
 
-  const form=document.getElementById('messageForm');
-  const submit=document.getElementById('messageSubmit');
-  const status=document.getElementById('messageStatus');
-  const modal=document.getElementById('thanksModal');
-  const closeBtn=document.getElementById('closeThanks');
-  let timer=null;
+// === V5.1 MOBILE SAFE + EMAILJS ===
+document.addEventListener('DOMContentLoaded', function(){
+  var animated = document.querySelectorAll('.section-transition,.reveal,.reveal-card,.reveal-soft');
 
-  const closeModal=()=>{ if(!modal)return; clearTimeout(timer); modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };
-  const openModal=()=>{ if(!modal)return; modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); clearTimeout(timer); timer=setTimeout(closeModal,5000); };
+  // Todo está visible desde CSS; la animación es solo decorativa.
+  if ('IntersectionObserver' in window) {
+    var animObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('mobile-animate');
+          animObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.06});
+    animated.forEach(function(el){ animObserver.observe(el); });
+  }
 
-  closeBtn?.addEventListener('click',ev=>{ev.preventDefault();ev.stopPropagation();closeModal()},{passive:false});
-  closeBtn?.addEventListener('touchend',ev=>{ev.preventDefault();ev.stopPropagation();closeModal()},{passive:false});
-  modal?.addEventListener('click',ev=>{if(ev.target.classList.contains('thanks-backdrop')||ev.target.dataset.closeThanks==='true')closeModal()});
-  document.addEventListener('keydown',ev=>{if(ev.key==='Escape')closeModal()});
+  var form = document.getElementById('messageForm');
+  var submit = document.getElementById('messageSubmit');
+  var status = document.getElementById('messageStatus');
+  var modal = document.getElementById('thanksModal');
+  var closeBtn = document.getElementById('closeThanks');
+  var timer = null;
+
+  function closeThanks(){
+    if(!modal) return;
+    if(timer) clearTimeout(timer);
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+  }
+
+  function openThanks(){
+    if(!modal) return;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    if(timer) clearTimeout(timer);
+    timer = setTimeout(closeThanks, 5000);
+  }
+
+  if(closeBtn){
+    closeBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      closeThanks();
+    });
+  }
+
+  if(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target && e.target.classList && e.target.classList.contains('thanks-backdrop')){
+        closeThanks();
+      }
+    });
+  }
 
   if(form){
-    form.addEventListener('submit',async ev=>{
-      ev.preventDefault();
-      const cfg=window.EMAILJS_CONFIG||{};
-      if(typeof emailjs==='undefined'||!cfg.publicKey||!cfg.serviceId||!cfg.templateId){
-        if(status){status.textContent='No se pudo cargar el servicio de mensajes.';status.className='message-status error'}
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+
+      var cfg = window.EMAILJS_CONFIG || {};
+      if(typeof emailjs === 'undefined' || !cfg.publicKey || !cfg.serviceId || !cfg.templateId){
+        if(status){
+          status.textContent = 'No se pudo cargar el servicio de mensajes.';
+          status.className = 'message-status error';
+        }
         return;
       }
-      if(submit){submit.disabled=true;submit.textContent='ENVIANDO...'}
-      if(status){status.textContent='Enviando tu mensaje...';status.className='message-status sending'}
+
+      if(submit){
+        submit.disabled = true;
+        submit.textContent = 'ENVIANDO...';
+      }
+      if(status){
+        status.textContent = 'Enviando tu mensaje...';
+        status.className = 'message-status sending';
+      }
+
       try{
         emailjs.init({publicKey:cfg.publicKey});
-        await emailjs.sendForm(cfg.serviceId,cfg.templateId,form);
+        await emailjs.sendForm(cfg.serviceId, cfg.templateId, form);
         form.reset();
-        if(status){status.textContent='';status.className='message-status'}
-        openModal();
+        if(status){
+          status.textContent = '';
+          status.className = 'message-status';
+        }
+        openThanks();
       }catch(err){
-        console.error('EmailJS',err);
-        if(status){status.textContent='No pudimos enviar el mensaje. Intenta nuevamente.';status.className='message-status error'}
+        console.error('EmailJS', err);
+        if(status){
+          status.textContent = 'No pudimos enviar el mensaje. Intenta nuevamente.';
+          status.className = 'message-status error';
+        }
       }finally{
-        if(submit){submit.disabled=false;submit.textContent='ENVIAR MENSAJE'}
+        if(submit){
+          submit.disabled = false;
+          submit.textContent = 'ENVIAR MENSAJE';
+        }
       }
-    })
+    });
   }
 });

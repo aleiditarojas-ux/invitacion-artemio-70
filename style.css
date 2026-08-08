@@ -807,3 +807,94 @@ img,svg,video{max-width:100%;height:auto}
   .countdown span{font-size:.32rem!important}
   .event-icon{width:34px;height:34px;margin-bottom:9px}
 }
+
+/* ===== V5.1 MOBILE SAFE =====
+   Importante: el contenido nunca se oculta por defecto.
+   Esto evita páginas en blanco en navegadores móviles/in-app. */
+.reveal,
+.reveal-card,
+.reveal-soft,
+.section-transition{
+  opacity:1 !important;
+  transform:none !important;
+  filter:none !important;
+  visibility:visible !important;
+}
+
+.mobile-animate{
+  animation:mobileSoftIn .72s cubic-bezier(.2,.75,.2,1) both;
+}
+@keyframes mobileSoftIn{
+  from{opacity:.25;transform:translateY(14px)}
+  to{opacity:1;transform:none}
+}
+
+.elegant-event-icon{
+  width:46px;
+  height:46px;
+  margin:2px auto 10px;
+  color:var(--silver);
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(201,206,216,.5);
+  border-radius:50%;
+  background:rgba(255,255,255,.035);
+}
+.elegant-event-icon svg{
+  width:27px;
+  height:27px;
+  display:block;
+}
+
+/* Evitar problemas de altura/zoom en navegadores integrados */
+html,body{min-height:100%;width:100%;max-width:100%;overflow-x:hidden}
+main{width:100%;max-width:100%}
+.hero{min-height:auto!important}
+@supports (min-height:100svh){
+  .hero{min-height:100svh!important}
+}
+
+/* Contador definitivamente en un solo renglón */
+.countdown{
+  display:grid!important;
+  grid-template-columns:repeat(4,1fr)!important;
+  width:min(100%,520px)!important;
+  max-width:520px!important;
+}
+.countdown div{min-width:0!important}
+.countdown strong{font-size:clamp(1.15rem,5vw,1.75rem)!important}
+.countdown span{font-size:.42rem!important;white-space:nowrap!important}
+
+/* Modal estable en iOS/Android */
+.thanks-modal{
+  position:fixed!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  height:100dvh!important;
+}
+.thanks-modal:not(.open){
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+.thanks-modal.open{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+}
+.thanks-card{
+  max-height:calc(100dvh - 40px);
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+@media(max-width:520px){
+  .hero{padding:58px 18px 48px!important}
+  .section{padding:58px 18px!important}
+  .two-column,.event-grid{gap:26px!important}
+  .event-card{padding-left:18px!important;padding-right:18px!important}
+  .dress-subtle{padding:26px 16px!important}
+  .premium-rsvp-button{width:100%!important;max-width:340px!important}
+  .message-form{width:100%!important}
+}
