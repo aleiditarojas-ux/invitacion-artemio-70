@@ -185,3 +185,23 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 });
+
+// === V5.2 transiciones alternadas ===
+document.addEventListener('DOMContentLoaded', function(){
+  var items = document.querySelectorAll('.slide-reveal');
+  if(!('IntersectionObserver' in window)) return;
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var el = entry.target;
+        var idx = Array.prototype.indexOf.call(items, el);
+        var cls = idx % 3 === 0 ? 'enter-from-left' : (idx % 3 === 1 ? 'enter-from-right' : 'enter-from-bottom');
+        el.classList.add(cls);
+        observer.unobserve(el);
+      }
+    });
+  }, {threshold:0.14, rootMargin:'0px 0px -30px 0px'});
+
+  items.forEach(function(el){ observer.observe(el); });
+});

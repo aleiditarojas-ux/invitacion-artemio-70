@@ -898,3 +898,63 @@ main{width:100%;max-width:100%}
   .premium-rsvp-button{width:100%!important;max-width:340px!important}
   .message-form{width:100%!important}
 }
+
+/* ===== V5.2 HORARIOS + TRANSICIONES ===== */
+.event-card .event-time,
+.event-card .time{
+  margin-top:14px!important;
+  padding-top:12px!important;
+  border-top:1px solid rgba(215,222,230,.28);
+  font-weight:600;
+  letter-spacing:.04em;
+}
+
+.slide-reveal{
+  opacity:1;
+  transform:none;
+}
+.slide-reveal.enter-from-right{animation:slideFromRight .8s cubic-bezier(.2,.75,.2,1) both}
+.slide-reveal.enter-from-left{animation:slideFromLeft .8s cubic-bezier(.2,.75,.2,1) both}
+.slide-reveal.enter-from-bottom{animation:slideFromBottom .8s cubic-bezier(.2,.75,.2,1) both}
+
+@keyframes slideFromRight{
+  from{opacity:.15;transform:translateX(34px) scale(.99);filter:blur(2px)}
+  to{opacity:1;transform:none;filter:none}
+}
+@keyframes slideFromLeft{
+  from{opacity:.15;transform:translateX(-34px) scale(.99);filter:blur(2px)}
+  to{opacity:1;transform:none;filter:none}
+}
+@keyframes slideFromBottom{
+  from{opacity:.15;transform:translateY(30px) scale(.99);filter:blur(2px)}
+  to{opacity:1;transform:none;filter:none}
+}
+
+.section-transition::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:8%;
+  right:8%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,222,230,.45),transparent);
+  opacity:.7;
+}
+
+@media(max-width:520px){
+  .slide-reveal.enter-from-right{animation-name:slideFromRightMobile}
+  .slide-reveal.enter-from-left{animation-name:slideFromLeftMobile}
+  .slide-reveal.enter-from-bottom{animation-name:slideFromBottomMobile}
+}
+@keyframes slideFromRightMobile{
+  from{opacity:.2;transform:translateX(18px)}
+  to{opacity:1;transform:none}
+}
+@keyframes slideFromLeftMobile{
+  from{opacity:.2;transform:translateX(-18px)}
+  to{opacity:1;transform:none}
+}
+@keyframes slideFromBottomMobile{
+  from{opacity:.2;transform:translateY(18px)}
+  to{opacity:1;transform:none}
+}
