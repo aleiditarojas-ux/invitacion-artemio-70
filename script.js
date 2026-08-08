@@ -82,73 +82,113 @@ document.querySelectorAll('.reveal-card').forEach(el=>revealCardObserver.observe
 
 
 
-// ===== FINAL: TRANSICIONES + EMAILJS =====
+
+// ===== REVISIÓN FINAL: TRANSICIONES + EMAILJS + MODAL =====
 document.addEventListener('DOMContentLoaded', () => {
-  const targets = document.querySelectorAll('.section-transition,.reveal-soft,.reveal-card');
+  const animated = document.querySelectorAll('.section-transition,.reveal,.reveal-card,.reveal-soft');
   if ('IntersectionObserver' in window) {
-    const obs = new IntersectionObserver((entries)=>{
+    const observer = new IntersectionObserver((entries)=>{
       entries.forEach((entry)=>{
         if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
+          entry.target.classList.add('visible','show');
+          observer.unobserve(entry.target);
         }
       });
-    }, {threshold:.12, rootMargin:'0px 0px -30px 0px'});
-    targets.forEach((el,i)=>{
-      el.style.transitionDelay = `${Math.min(i%4,3)*80}ms`;
-      obs.observe(el);
+    }, {threshold:.1, rootMargin:'0px 0px -20px 0px'});
+    animated.forEach((el,i)=>{
+      el.style.transitionDelay = `${Math.min(i%4,3)*70}ms`;
+      observer.observe(el);
     });
   } else {
-    targets.forEach(el=>el.classList.add('visible'));
+    animated.forEach(el=>el.classList.add('visible','show'));
   }
 
   const form = document.getElementById('messageForm');
   const submit = document.getElementById('messageSubmit');
   const status = document.getElementById('messageStatus');
   const modal = document.getElementById('thanksModal');
-  const close = document.getElementById('closeThanks');
+  const closeBtn = document.getElementById('closeThanks');
 
-  function closeModal(){
+  let autoCloseTimer = null;
+
+  function openThanks(){
     if(!modal) return;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    clearTimeout(autoCloseTimer);
+    autoCloseTimer = setTimeout(closeThanks, 5000);
+  }
+
+  function closeThanks(){
+    if(!modal) return;
+    clearTimeout(autoCloseTimer);
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden','true');
   }
-  if(close) close.addEventListener('click',closeModal);
-  if(modal){
-    const bd = modal.querySelector('.thanks-backdrop');
-    if(bd) bd.addEventListener('click',closeModal);
+
+  if(closeBtn){
+    closeBtn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      e.stopPropagation();
+      closeThanks();
+    });
   }
+
+  if(modal){
+    modal.addEventListener('click', (e)=>{
+      if(e.target.classList.contains('thanks-backdrop') || e.target.dataset.closeThanks === 'true'){
+        closeThanks();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && modal?.classList.contains('open')) closeThanks();
+  });
 
   if(form){
     form.addEventListener('submit', async (e)=>{
       e.preventDefault();
+
       const cfg = window.EMAILJS_CONFIG || {};
-      if(!cfg.publicKey || !cfg.serviceId || !cfg.templateId){
-        status.textContent='La configuración de mensajes no está disponible.';
-        status.className='message-status error';
+      if(!cfg.publicKey || !cfg.serviceId || !cfg.templateId || typeof emailjs === 'undefined'){
+        if(status){
+          status.textContent='No se pudo cargar el servicio de mensajes.';
+          status.className='message-status error';
+        }
         return;
       }
-      submit.disabled=true;
-      submit.textContent='ENVIANDO...';
-      status.textContent='Enviando tu mensaje...';
-      status.className='message-status sending';
+
+      if(submit){
+        submit.disabled = true;
+        submit.textContent = 'ENVIANDO...';
+      }
+      if(status){
+        status.textContent='Enviando tu mensaje...';
+        status.className='message-status sending';
+      }
+
       try{
-        emailjs.init({ publicKey: cfg.publicKey });
-        await emailjs.sendForm(cfg.serviceId,cfg.templateId,form);
+        emailjs.init({publicKey: cfg.publicKey});
+        await emailjs.sendForm(cfg.serviceId, cfg.templateId, form);
+
         form.reset();
-        status.textContent='';
-        status.className='message-status';
-        if(modal){
-          modal.classList.add('open');
-          modal.setAttribute('aria-hidden','false');
+        if(status){
+          status.textContent='';
+          status.className='message-status';
         }
-      }catch(err){
-        console.error(err);
-        status.textContent='No pudimos enviar el mensaje. Intenta nuevamente en un momento.';
-        status.className='message-status error';
+        openThanks();
+      }catch(error){
+        console.error('EmailJS:', error);
+        if(status){
+          status.textContent='No pudimos enviar el mensaje. Intenta nuevamente en un momento.';
+          status.className='message-status error';
+        }
       }finally{
-        submit.disabled=false;
-        submit.textContent='ENVIAR MENSAJE';
+        if(submit){
+          submit.disabled=false;
+          submit.textContent='ENVIAR MENSAJE';
+        }
       }
     });
   }

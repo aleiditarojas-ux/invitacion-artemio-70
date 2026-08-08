@@ -765,3 +765,60 @@ body{
   .countdown strong{font-size:1.28rem!important}
   .countdown span{font-size:.38rem!important}
 }
+
+/* === Correcciones finales de revisión === */
+.countdown{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:4px!important;
+  max-width:520px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+.countdown div{padding:8px 2px!important;min-width:0!important}
+.countdown strong{font-size:clamp(1.25rem,4.4vw,1.9rem)!important;line-height:1!important}
+.countdown span{
+  font-size:clamp(.38rem,1.35vw,.54rem)!important;
+  letter-spacing:.02em!important;
+  white-space:nowrap!important;
+}
+
+/* Vestimenta más sutil */
+.dress-subtle{max-width:680px!important;padding:28px 22px!important}
+.hanger-icon{width:32px!important;height:24px!important;margin:0 auto 10px!important}
+.dress-guidance{display:none!important}
+
+/* Más transiciones */
+.section-transition{
+  opacity:0;
+  transform:translateY(34px);
+  transition:opacity .9s ease, transform .9s cubic-bezier(.2,.75,.2,1);
+}
+.section-transition.visible{opacity:1;transform:none}
+.section-transition::after{
+  content:"";
+  position:absolute;left:12%;right:12%;bottom:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(217,222,230,.5),transparent);
+}
+.photo-frame,.event-card,.dress-premium,.rsvp-premium,.message-form{
+  transition:transform .7s ease, opacity .7s ease, box-shadow .7s ease;
+}
+.photo-frame:hover{transform:translateY(-3px) scale(1.01)}
+
+/* Modal agradecimiento y cierre */
+.thanks-modal{pointer-events:none}
+.thanks-modal.open{pointer-events:auto}
+.thanks-card{position:relative;z-index:2}
+.thanks-backdrop{cursor:pointer}
+.message-status{
+  min-height:1.4em;
+  margin-top:10px;
+  font-size:.78rem;
+}
+.message-status.error{color:#8b3840}
+.message-status.sending{color:#66717f}
+@media(max-width:420px){
+  .countdown{gap:2px!important}
+  .countdown div{padding:7px 1px!important}
+  .countdown strong{font-size:1.18rem!important}
+  .countdown span{font-size:.35rem!important}
+}
