@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // ===== V13: DESTELLOS PLATEADOS SUTILES =====
 document.addEventListener('DOMContentLoaded', function(){
-  var layer = document.getElementById('silverSparkles');
+  var layer = null;
   if(!layer) return;
 
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

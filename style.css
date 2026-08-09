@@ -1492,3 +1492,9 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
     opacity:.65;
   }
 }
+
+/* V14: destellos plateados eliminados */
+#silverSparkles,.silver-sparkles,.silver-sparkle,.sparkle-star{
+  display:none !important;
+  animation:none !important;
+}

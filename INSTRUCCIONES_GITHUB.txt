@@ -34,3 +34,11 @@ V13:
 - Se agregó “Paz y Bien” al final, después de la despedida.
 - Los destellos son ligeros para no afectar el celular.
 Prueba: https://invitacion-artemio-70.vercel.app/?v=130
+
+V14:
+- Se eliminaron por completo los destellos plateados.
+- Se conserva la caja de mensajes azul, “Paz y Bien”, fotos, transiciones y demás ajustes.
+- La pista elegida es Inspiring Piano & Strings de Pixabay. El MP3 aún no está incluido en este ZIP; hay que descargarlo y agregarlo para sustituir la música actual.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=140
+
+V15: Música reemplazada por Inspiring Piano & Strings. MP3 incluido, botón conservado y reproducción en loop. Prueba: https://invitacion-artemio-70.vercel.app/?v=150
