@@ -207,3 +207,19 @@ document.addEventListener('DOMContentLoaded', function(){
     observer.observe(el);
   });
 });
+
+
+// V8: animation remains vertical only; galleries use native horizontal touch scrolling.
+document.addEventListener('DOMContentLoaded', function(){
+  var galleryItems = document.querySelectorAll('.memory-card,.solo-slide,.timeline-item');
+  if(!('IntersectionObserver' in window)) return;
+  var o = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('animate-up');
+        o.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.08, rootMargin:'0px 0px -20px 0px'});
+  galleryItems.forEach(function(el){ o.observe(el); });
+});
