@@ -1370,3 +1370,125 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
     opacity:1 !important; transform:none !important; transition:none !important;
   }
 }
+
+/* ===== V13 PULIDO FINAL ===== */
+
+/* Caja de recuerdos: misma familia visual que Código de Vestimenta */
+.message-wrap-dress-tone{
+  max-width:820px;
+  margin:auto;
+  padding:42px 26px;
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(255,255,255,.08),transparent 32%),
+    linear-gradient(180deg,#173b67 0%,#0d2f57 46%,#081f3d 100%) !important;
+  border:1px solid rgba(210,218,229,.72) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.03),
+    0 24px 55px rgba(0,0,0,.24);
+}
+.message-wrap-dress-tone .eyebrow{
+  color:#d8e0ea !important;
+}
+.message-wrap-dress-tone h2{
+  color:#f3f6fa !important;
+  text-shadow:0 1px 0 rgba(0,0,0,.12);
+}
+.message-wrap-dress-tone > p{
+  color:#d0d9e5 !important;
+  opacity:1 !important;
+}
+
+.message-form-dress-tone{
+  background:rgba(236,241,247,.96) !important;
+  border:1px solid #c4cfdb !important;
+  border-radius:18px;
+  padding:22px !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.85);
+}
+.message-form-dress-tone label{
+  color:#24364e !important;
+}
+.message-form-dress-tone input,
+.message-form-dress-tone textarea{
+  background:#f9fbfd !important;
+  color:#0b213b !important;
+  border:1px solid #aebdcd !important;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.04);
+}
+.message-form-dress-tone input::placeholder,
+.message-form-dress-tone textarea::placeholder{
+  color:#7b8898 !important;
+  opacity:1 !important;
+}
+.message-form-dress-tone textarea{
+  min-height:210px !important;
+}
+.message-form-dress-tone .button{
+  background:linear-gradient(180deg,#0f3159,#071c36) !important;
+  color:#f7f9fb !important;
+  border:1px solid #aab8c9 !important;
+}
+.message-wrap-dress-tone .privacy-note{
+  color:#cbd5e1 !important;
+}
+
+/* Despedida */
+.farewell-flourish{
+  margin:22px auto 10px;
+  color:#bfc9d6;
+  letter-spacing:.35em;
+}
+.peace-good{
+  margin:0;
+  color:#e6ebf1;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(2rem,6vw,3rem);
+  font-style:italic;
+  letter-spacing:.04em;
+  text-shadow:0 0 18px rgba(215,224,236,.10);
+}
+
+/* Destellos plateados sutiles */
+.silver-sparkles{
+  position:fixed;
+  inset:0;
+  z-index:50;
+  pointer-events:none;
+  overflow:hidden;
+}
+.silver-sparkle{
+  position:absolute;
+  top:-18px;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  background:rgba(224,230,238,.72);
+  box-shadow:0 0 8px rgba(224,230,238,.38);
+  animation:silverFall linear forwards;
+}
+.silver-sparkle.sparkle-star{
+  width:5px;
+  height:5px;
+  border-radius:0;
+  transform:rotate(45deg);
+}
+@keyframes silverFall{
+  0%{transform:translate3d(0,-12px,0) rotate(0deg);opacity:0}
+  12%{opacity:.7}
+  85%{opacity:.45}
+  100%{transform:translate3d(var(--drift,18px),105vh,0) rotate(180deg);opacity:0}
+}
+
+@media(max-width:520px){
+  .message-wrap-dress-tone{
+    padding:30px 16px !important;
+    border-radius:20px;
+  }
+  .message-form-dress-tone{
+    padding:18px 14px !important;
+  }
+  .silver-sparkle{
+    opacity:.65;
+  }
+}

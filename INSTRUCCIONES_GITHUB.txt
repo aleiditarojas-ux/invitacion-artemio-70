@@ -26,3 +26,11 @@ V12:
 - Una vez visibles, permanecen estáticas.
 - Se conservan “Sus padres” y “Su mamá”.
 Prueba: https://invitacion-artemio-70.vercel.app/?v=120
+
+V13:
+- La caja de mensajes ahora usa un azul similar al Código de Vestimenta, con campos claros.
+- Se conserva EmailJS y el mensaje de agradecimiento actual.
+- Se agregaron destellos plateados muy sutiles durante la invitación.
+- Se agregó “Paz y Bien” al final, después de la despedida.
+- Los destellos son ligeros para no afectar el celular.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=130

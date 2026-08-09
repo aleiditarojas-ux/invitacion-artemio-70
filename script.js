@@ -308,3 +308,32 @@ document.addEventListener('DOMContentLoaded', function(){
   }, {threshold:.16, rootMargin:'0px 0px -35px 0px'});
   cards.forEach(function(card){ observer.observe(card); });
 });
+
+// ===== V13: DESTELLOS PLATEADOS SUTILES =====
+document.addEventListener('DOMContentLoaded', function(){
+  var layer = document.getElementById('silverSparkles');
+  if(!layer) return;
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduceMotion) return;
+
+  function createSparkle(){
+    var el = document.createElement('span');
+    el.className = 'silver-sparkle' + (Math.random() > .72 ? ' sparkle-star' : '');
+    el.style.left = (Math.random() * 100) + 'vw';
+    el.style.setProperty('--drift', ((Math.random() * 40) - 20) + 'px');
+    el.style.animationDuration = (7 + Math.random() * 6) + 's';
+    el.style.animationDelay = (Math.random() * .8) + 's';
+    layer.appendChild(el);
+
+    setTimeout(function(){
+      if(el && el.parentNode) el.parentNode.removeChild(el);
+    }, 14000);
+  }
+
+  // Pocos destellos para mantener elegancia y rendimiento.
+  for(var i=0;i<7;i++){
+    setTimeout(createSparkle, i * 700);
+  }
+  setInterval(createSparkle, 1800);
+});
