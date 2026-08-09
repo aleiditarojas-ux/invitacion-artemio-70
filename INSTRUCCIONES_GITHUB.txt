@@ -52,3 +52,11 @@ V16 REVISION FAMILIAR:
 - Agradecimiento corregido para evitar repetición.
 - Se conserva música, botón, colores y Paz y Bien; sin destellos.
 Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=160
+
+V17:
+- Primera foto de SU FAMILIA sin pie de foto.
+- Después de “Sus hijos pequeños”, la siguiente foto dice “Los primeros años de su familia”.
+- La foto con flores amarillas queda una sola vez, al final, con “Siempre juntos”.
+- Caja final: “¡Muchas gracias por tus palabras!”.
+- Se conserva el resto de V16.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=170
