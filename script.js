@@ -223,3 +223,61 @@ document.addEventListener('DOMContentLoaded', function(){
   }, {threshold:.08, rootMargin:'0px 0px -20px 0px'});
   galleryItems.forEach(function(el){ o.observe(el); });
 });
+
+// ===== V9: RAÍCES, FAMILIA, TIMELINE Y VIAJE =====
+document.addEventListener('DOMContentLoaded', function(){
+  function autoCinema(selector, activeClass, interval){
+    var slides = Array.prototype.slice.call(document.querySelectorAll(selector));
+    if(slides.length < 2) return;
+    var index = 0;
+    setInterval(function(){
+      slides[index].classList.remove(activeClass);
+      index = (index + 1) % slides.length;
+      slides[index].classList.add(activeClass);
+    }, interval);
+  }
+
+  autoCinema('.roots-frame', 'roots-frame-active', 5000);
+  autoCinema('.solo-cinema-slide', 'solo-cinema-active', 4800);
+
+  var familyCards = document.querySelectorAll('.family-scroll-reveal');
+  if('IntersectionObserver' in window){
+    var familyObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('family-in');
+          familyObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.18, rootMargin:'0px 0px -40px 0px'});
+    familyCards.forEach(function(card){ familyObserver.observe(card); });
+  }else{
+    familyCards.forEach(function(card){ card.classList.add('family-in'); });
+  }
+
+  var timeline = document.getElementById('lifeTimeline');
+  var fill = document.getElementById('timelineFill');
+  var steps = document.querySelectorAll('.timeline-step');
+
+  function updateTimeline(){
+    if(!timeline || !fill) return;
+    var rect = timeline.getBoundingClientRect();
+    var viewport = window.innerHeight || document.documentElement.clientHeight;
+    var start = viewport * .75;
+    var end = viewport * .22;
+    var total = rect.height + start - end;
+    var passed = start - rect.top;
+    var progress = Math.max(0, Math.min(1, passed / total));
+    fill.style.height = (progress * 100) + '%';
+    steps.forEach(function(step){
+      var r = step.getBoundingClientRect();
+      if(r.top < viewport * .82){
+        step.classList.add('timeline-visible');
+      }
+    });
+  }
+
+  updateTimeline();
+  window.addEventListener('scroll', updateTimeline, {passive:true});
+  window.addEventListener('resize', updateTimeline);
+});

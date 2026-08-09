@@ -1,22 +1,24 @@
-INVITACIÓN ARTEMIO — V8 MOBILE FAMILIA
+INVITACIÓN ARTEMIO — VERSIÓN 9 REFINADA
 
-Base: última versión estable que se veía correctamente en celular.
+- SUS RAÍCES: papás y mamá, transición automática tipo video.
+- Se quitó hermanos.
+- MI FAMILIA: hijos pequeños → esposa frente al corazón → nietos → esposa rodeados de flores.
+- Fotos familiares aparecen conforme bajas en celular.
+- Línea del tiempo progresiva e interactiva.
+- En 'Cada momento ha sido parte del viaje' se quitó RECUERDOS y el texto extra.
+- Las seis fotos de Artemio cambian automáticamente.
+- Se deja solamente 'DESLIZA'.
+- MISA y CELEBRACIÓN tienen formatos distintos en azules y plateado.
+- Caja de mensajes en colores claros.
+- Se conserva EmailJS y la ventana de agradecimiento.
+- Sin límite de longitud para mensajes.
+- El cierre ya no repite '7 décadas · miles de historias · 3 generaciones'.
 
-Cambios incorporados:
-- SUS RAÍCES: padres, mamá y hermanos.
-- MI FAMILIA: esposa, familia, nietos y un momento familiar.
-- Línea del tiempo después de MI FAMILIA, sin fotografías.
-- Cada momento ha sido parte del viaje: galería deslizable con 6 fotos de Artemio solo.
-- Toda la invitación en combinaciones de azul y plateado.
-- Caja de mensajes más elegante, sin límite de caracteres.
-- Se conserva EmailJS y el mensaje de agradecimiento.
-- Transiciones únicamente de abajo hacia arriba.
-- Se conserva el botón de música.
-
-PUBLICAR:
-1. Descomprime el ZIP.
-2. GitHub > invitacion-artemio-70 > Add file > Upload files.
-3. Sube TODOS los archivos y reemplaza los existentes.
+Para publicar:
+1. Descomprime.
+2. GitHub > Add file > Upload files.
+3. Sube todo y reemplaza.
 4. Commit changes.
-5. Espera a que Vercel marque Ready.
-6. En celular prueba: https://invitacion-artemio-70.vercel.app/?v=80
+5. Espera a Vercel Ready.
+6. Prueba en celular con:
+https://invitacion-artemio-70.vercel.app/?v=90
