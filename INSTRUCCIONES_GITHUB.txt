@@ -42,3 +42,13 @@ V14:
 Prueba: https://invitacion-artemio-70.vercel.app/?v=140
 
 V15: Música reemplazada por Inspiring Piano & Strings. MP3 incluido, botón conservado y reproducción en loop. Prueba: https://invitacion-artemio-70.vercel.app/?v=150
+
+V16 REVISION FAMILIAR:
+- Textos secundarios más grandes para mejor lectura.
+- Fecha retirada de portada y destacada en contador.
+- Línea del tiempo inicia 20 DE OCTUBRE DE 1956.
+- Sus raíces incorpora foto original de sus hermanos.
+- Su familia inicia con foto original de boda, seguida por hijos pequeños y nueva foto familiar.
+- Agradecimiento corregido para evitar repetición.
+- Se conserva música, botón, colores y Paz y Bien; sin destellos.
+Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=160

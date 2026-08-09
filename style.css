@@ -1498,3 +1498,19 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
   display:none !important;
   animation:none !important;
 }
+
+/* ===== V16 REVISION FAMILIAR ===== */
+.section-intro{font-size:clamp(1.16rem,2.8vw,1.34rem)!important;line-height:1.78!important}
+.lead{font-size:clamp(1.14rem,2.7vw,1.3rem)!important;line-height:1.72!important}
+.family-story-card figcaption,.roots-frame figcaption{font-size:clamp(1.32rem,3.5vw,1.55rem)!important}
+.timeline-copy p:not(.timeline-year){font-size:clamp(1.08rem,2.8vw,1.24rem)!important;line-height:1.6!important}
+.event-date-emphasis{font-size:clamp(1.55rem,5vw,2.25rem)!important;letter-spacing:.12em;font-weight:600;color:#f1f4f8}
+/* Las fotos nuevas se muestran completas, sin recortar personas */
+.roots-frame:nth-of-type(3) img{object-fit:contain!important;object-position:center center!important;background:#07182f}
+.family-story-photo img{object-fit:contain!important;object-position:center center!important}
+@media(max-width:600px){
+  .section-intro{font-size:1.2rem!important;line-height:1.72!important}
+  .lead{font-size:1.18rem!important;line-height:1.68!important}
+  .timeline-copy p:not(.timeline-year){font-size:1.1rem!important}
+  .event-date-emphasis{font-size:1.7rem!important;line-height:1.25}
+}
