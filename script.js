@@ -281,3 +281,30 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('scroll', updateTimeline, {passive:true});
   window.addEventListener('resize', updateTimeline);
 });
+
+// V12: aparición vertical de las fotos de SU FAMILIA
+document.addEventListener('DOMContentLoaded', function(){
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.family-story-card'));
+  if(!cards.length) return;
+  cards.forEach(function(card){
+    card.classList.remove('family-in');
+    card.classList.add('family-v12-pending');
+  });
+  if(!('IntersectionObserver' in window)){
+    cards.forEach(function(card){
+      card.classList.remove('family-v12-pending');
+      card.classList.add('family-v12-visible');
+    });
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.remove('family-v12-pending');
+        entry.target.classList.add('family-v12-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.16, rootMargin:'0px 0px -35px 0px'});
+  cards.forEach(function(card){ observer.observe(card); });
+});

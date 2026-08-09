@@ -1342,3 +1342,31 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
     padding:46px 20px 56px;
   }
 }
+
+/* V12: SU FAMILIA - solo aparición vertical */
+.family-story-card,.family-scroll-reveal,
+.family-story-card:nth-child(odd),.family-story-card:nth-child(even){
+  transform:none !important; translate:none !important; animation:none !important;
+}
+.family-story-card.family-v12-pending{
+  opacity:.08 !important;
+  transform:translateY(28px) !important;
+}
+.family-story-card.family-v12-visible{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+  transition:opacity .82s cubic-bezier(.2,.72,.2,1),
+             transform .82s cubic-bezier(.2,.72,.2,1) !important;
+}
+.family-story-card.family-v12-visible:hover,
+.family-story-card.family-v12-visible:focus-within,
+.family-story-card.family-v12-visible .family-story-photo,
+.family-story-card.family-v12-visible img{
+  transform:none !important; translate:none !important;
+}
+@media (prefers-reduced-motion: reduce){
+  .family-story-card.family-v12-pending,
+  .family-story-card.family-v12-visible{
+    opacity:1 !important; transform:none !important; transition:none !important;
+  }
+}

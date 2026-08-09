@@ -19,3 +19,10 @@ Para publicar:
 5. Espera a que Vercel muestre Ready.
 6. Prueba en celular con:
    https://invitacion-artemio-70.vercel.app/?v=100
+
+V12:
+- SU FAMILIA ya no se mueve de lado a lado.
+- Las fotos aparecen suavemente de abajo hacia arriba al avanzar.
+- Una vez visibles, permanecen estáticas.
+- Se conservan “Sus padres” y “Su mamá”.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=120
