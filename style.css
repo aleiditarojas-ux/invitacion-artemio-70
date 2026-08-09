@@ -1238,3 +1238,107 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
   .timeline-copy{padding:15px 16px}
   .message-wrap-light{padding:30px 16px;border-radius:20px}
 }
+
+/* ===== V10 AJUSTES FINALES ===== */
+
+/* Sus raíces: conservar completa la foto de los papás */
+.roots-frame:first-of-type{
+  background:
+    radial-gradient(circle at 50% 35%, rgba(55,84,118,.28), transparent 48%),
+    linear-gradient(180deg,#07182f,#0b2445);
+}
+.roots-frame:first-of-type img{
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#07182f;
+}
+
+/* Su familia */
+.family .section-heading .eyebrow{
+  letter-spacing:.28em;
+}
+
+/* Caja de mensajes más clara pero respetando azul y plateado */
+.message-wrap-light{
+  background:
+    linear-gradient(180deg,rgba(250,252,255,.98),rgba(226,233,241,.98)) !important;
+  border:1px solid #b8c5d4 !important;
+}
+.message-wrap-light .eyebrow{
+  color:#56697f !important;
+}
+.message-wrap-light h2{
+  color:#0b2445 !important;
+  text-shadow:none !important;
+}
+.message-wrap-light > p{
+  color:#3f5065 !important;
+  opacity:1 !important;
+}
+.message-form-light{
+  background:rgba(255,255,255,.86) !important;
+  border:1px solid #b9c5d2 !important;
+}
+.message-form-light label{
+  color:#1d3553 !important;
+}
+.message-form-light input,
+.message-form-light textarea{
+  background:#ffffff !important;
+  color:#0a1c33 !important;
+  border:1px solid #aebccc !important;
+}
+.message-form-light input::placeholder,
+.message-form-light textarea::placeholder{
+  color:#7d8a9a !important;
+  opacity:1 !important;
+}
+.message-wrap-light .privacy-note{
+  color:#647488 !important;
+}
+
+/* Despedida */
+.farewell-card{
+  max-width:760px;
+  margin:0 auto;
+  padding:54px 24px 64px;
+  text-align:center;
+}
+.farewell-card .eyebrow{
+  color:#dce3ec;
+  font-size:.78rem;
+  letter-spacing:.22em;
+  line-height:1.7;
+}
+.farewell-copy{
+  max-width:620px;
+  margin:22px auto 10px;
+  color:#cbd5e1;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(1.2rem,3vw,1.6rem);
+  line-height:1.5;
+}
+.farewell-signoff{
+  margin-top:18px;
+  color:#eef2f7;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(1.8rem,5vw,2.6rem);
+  font-style:italic;
+}
+
+/* Ajuste móvil de raíces */
+@media(max-width:520px){
+  .roots-cinema{
+    aspect-ratio:3/4;
+  }
+  .roots-frame:first-of-type img{
+    object-fit:contain !important;
+    object-position:center center !important;
+  }
+  .message-wrap-light{
+    padding:28px 15px !important;
+  }
+  .farewell-card{
+    padding:46px 20px 56px;
+  }
+}

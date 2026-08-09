@@ -1,24 +1,21 @@
-INVITACIÓN ARTEMIO — VERSIÓN 9 REFINADA
+INVITACIÓN ARTEMIO — VERSIÓN 10 AJUSTADA
 
-- SUS RAÍCES: papás y mamá, transición automática tipo video.
-- Se quitó hermanos.
-- MI FAMILIA: hijos pequeños → esposa frente al corazón → nietos → esposa rodeados de flores.
-- Fotos familiares aparecen conforme bajas en celular.
-- Línea del tiempo progresiva e interactiva.
-- En 'Cada momento ha sido parte del viaje' se quitó RECUERDOS y el texto extra.
-- Las seis fotos de Artemio cambian automáticamente.
-- Se deja solamente 'DESLIZA'.
-- MISA y CELEBRACIÓN tienen formatos distintos en azules y plateado.
-- Caja de mensajes en colores claros.
-- Se conserva EmailJS y la ventana de agradecimiento.
-- Sin límite de longitud para mensajes.
-- El cierre ya no repite '7 décadas · miles de historias · 3 generaciones'.
+Cambios:
+- La foto de sus papás en SUS RAÍCES se muestra completa para evitar cortar al papá.
+- MI FAMILIA cambió a SU FAMILIA.
+- Se quitó la palabra DESLIZA de la sección de fotos automáticas de Artemio.
+- La caja de mensajes quedó más clara, manteniendo azul, plata y blanco.
+- Se agregó una despedida final:
+  GRACIAS POR SER PARTE DE ESTE DÍA TAN ESPECIAL
+  Tu presencia y tu cariño harán de esta celebración un recuerdo inolvidable.
+  ¡Te esperamos!
+- Se conserva EmailJS, transiciones y funcionamiento móvil.
 
 Para publicar:
-1. Descomprime.
+1. Descomprime el ZIP.
 2. GitHub > Add file > Upload files.
-3. Sube todo y reemplaza.
+3. Sube todos los archivos y reemplaza los anteriores.
 4. Commit changes.
-5. Espera a Vercel Ready.
+5. Espera a que Vercel muestre Ready.
 6. Prueba en celular con:
-https://invitacion-artemio-70.vercel.app/?v=90
+   https://invitacion-artemio-70.vercel.app/?v=100
