@@ -83,3 +83,11 @@ V20:
 - Los bloques de la línea del tiempo alternan dos tonalidades elegantes de azul/gris plateado.
 - No se generó ni modificó ninguna fotografía.
 Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=200
+
+V21:
+- Agregada a SU FAMILIA la fotografía familiar enviada en esta revisión.
+- La fotografía se integró sin editarla ni generar una nueva imagen.
+- Retirados todos los títulos/pies de foto de las transiciones de SU FAMILIA.
+- Se mantiene la rotación automática de fotografías.
+- Se conservan los cambios de la línea del tiempo de V20.
+Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=210
