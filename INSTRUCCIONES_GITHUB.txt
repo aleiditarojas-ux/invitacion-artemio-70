@@ -74,3 +74,12 @@ V19:
 - Se conserva únicamente la foto final con el texto “Siempre juntos”.
 - No se generó, editó ni modificó ninguna fotografía.
 Prueba: https://invitacion-artemio-70.vercel.app/?v=190
+
+V20:
+- SU FAMILIA ahora funciona como galería automática: las fotos rotan solas, sin deslizar.
+- Eliminada de la secuencia la foto de sus hijos cuando eran niños.
+- Eliminada de la secuencia la foto de Artemio y su esposa frente al corazón, tomados de la mano.
+- Se conservan las demás fotos familiares, incluida la final “Siempre juntos”.
+- Los bloques de la línea del tiempo alternan dos tonalidades elegantes de azul/gris plateado.
+- No se generó ni modificó ninguna fotografía.
+Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=200

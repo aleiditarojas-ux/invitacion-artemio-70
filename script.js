@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   autoCinema('.roots-frame', 'roots-frame-active', 5000);
   autoCinema('.solo-cinema-slide', 'solo-cinema-active', 4800);
+  autoCinema('.family-cinema-slide', 'family-cinema-active', 5200);
 
   var familyCards = document.querySelectorAll('.family-scroll-reveal');
   if('IntersectionObserver' in window){

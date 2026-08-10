@@ -1514,3 +1514,46 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
   .timeline-copy p:not(.timeline-year){font-size:1.1rem!important}
   .event-date-emphasis{font-size:1.7rem!important;line-height:1.25}
 }
+
+/* V20 — SU FAMILIA en transición automática */
+.family-cinema{
+  position:relative;width:min(100%,820px);aspect-ratio:4/5;margin:30px auto 0;
+  overflow:hidden;border-radius:22px;border:1px solid rgba(218,224,233,.62);
+  background:#06172e;box-shadow:0 18px 42px rgba(0,0,0,.22)
+}
+.family-cinema-slide{
+  position:absolute;inset:0;margin:0;opacity:0;transform:translateY(18px);
+  transition:opacity 1s ease,transform 1s ease;pointer-events:none
+}
+.family-cinema-slide.family-cinema-active{opacity:1;transform:none;pointer-events:auto}
+.family-cinema-slide img{
+  display:block;width:100%;height:100%;object-fit:contain;object-position:center center;background:#06172e
+}
+.family-cinema-slide figcaption{
+  position:absolute;left:0;right:0;bottom:0;margin:0;padding:36px 18px 18px;
+  background:linear-gradient(transparent,rgba(3,17,36,.92));color:#f1f3f6;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(1.32rem,3.5vw,1.55rem);text-align:center
+}
+.family-progress{
+  position:absolute;left:8%;right:8%;bottom:10px;height:2px;
+  background:rgba(220,226,235,.18);overflow:hidden;z-index:5
+}
+.family-progress span{
+  display:block;height:100%;width:0;background:linear-gradient(90deg,#8997aa,#f0f3f7);
+  animation:familyCinemaProgress 5.2s linear infinite
+}
+@keyframes familyCinemaProgress{from{width:0}to{width:100%}}
+
+/* V20 — Línea del tiempo alternada para evitar apariencia monocromática */
+.timeline-step:nth-of-type(odd) .timeline-copy{
+  background:linear-gradient(180deg,rgba(24,58,94,.94),rgba(7,30,57,.96));
+  border-color:rgba(207,217,230,.38)
+}
+.timeline-step:nth-of-type(even) .timeline-copy{
+  background:linear-gradient(180deg,rgba(55,68,86,.92),rgba(22,37,58,.96));
+  border-color:rgba(225,229,236,.46)
+}
+@media (max-width:600px){
+  .family-cinema{aspect-ratio:4/5;border-radius:17px}
+}
