@@ -60,3 +60,11 @@ V17:
 - Caja final: “¡Muchas gracias por tus palabras!”.
 - Se conserva el resto de V16.
 Prueba: https://invitacion-artemio-70.vercel.app/?v=170
+
+V18:
+- En la foto de los hijos pequeños, el pie ahora dice “Los primeros años de su familia”.
+- Se eliminó la repetición de ese texto en la fotografía siguiente.
+- Se eliminó la aparición repetida de la foto de Artemio y su esposa con flores amarillas.
+- Esa foto queda una sola vez, al final de SU FAMILIA, con “Siempre juntos”.
+- No se modificó ni generó ninguna fotografía.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=180
