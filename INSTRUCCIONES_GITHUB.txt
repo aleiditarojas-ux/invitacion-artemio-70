@@ -68,3 +68,9 @@ V18:
 - Esa foto queda una sola vez, al final de SU FAMILIA, con “Siempre juntos”.
 - No se modificó ni generó ninguna fotografía.
 Prueba: https://invitacion-artemio-70.vercel.app/?v=180
+
+V19:
+- Eliminada la aparición repetida de la foto con flores amarillas que estaba después de “Los primeros años de su familia”.
+- Se conserva únicamente la foto final con el texto “Siempre juntos”.
+- No se generó, editó ni modificó ninguna fotografía.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=190
