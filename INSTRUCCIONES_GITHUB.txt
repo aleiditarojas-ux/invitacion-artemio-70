@@ -91,3 +91,11 @@ V21:
 - Se mantiene la rotación automática de fotografías.
 - Se conservan los cambios de la línea del tiempo de V20.
 Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=210
+
+V22:
+- SU FAMILIA queda exactamente con 4 fotografías en rotación automática.
+- Orden: boda → hijos grandes → nietos → flores amarillas.
+- Eliminada la fotografía repetida.
+- Sin títulos/pies de foto dentro de estas cuatro transiciones.
+- El resto de la invitación permanece sin cambios.
+Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=220
