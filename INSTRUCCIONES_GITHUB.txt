@@ -99,3 +99,20 @@ V22:
 - Sin títulos/pies de foto dentro de estas cuatro transiciones.
 - El resto de la invitación permanece sin cambios.
 Prueba sugerida: https://invitacion-artemio-70.vercel.app/?v=220
+
+V23:
+- Foto nueva agregada a “Cada momento ha sido parte del viaje”.
+- 1974 / 18 años: Rigo Tovar, José José y Camilo Sesto.
+- 1986 / 30 años: se retiró la referencia al Mundial.
+- 1994 / 38 años: se casó por la iglesia.
+- 1996 / 40 años: construyó su casa.
+- Bloques de la línea del tiempo aclarados y alternados en azul hielo / azul plateado.
+- Se conserva el resto de V22.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=230
+
+V24:
+- Eliminado completamente el renglón/bloque 1986 · 30 años.
+- 1994 ahora aparece como “1994 · 30 AÑOS”, para indicar la década sin especificar que tenía 38.
+- Se conserva “Se casó por la iglesia.”
+- El resto de V23 permanece sin cambios.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=240

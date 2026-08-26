@@ -1557,3 +1557,18 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
 @media (max-width:600px){
   .family-cinema{aspect-ratio:4/5;border-radius:17px}
 }
+
+/* V23 — línea del tiempo más clara, conservando azul marino y plateado */
+.timeline-step:nth-of-type(odd) .timeline-copy{
+ background:linear-gradient(145deg,rgba(213,225,238,.98),rgba(176,198,220,.96))!important;
+ border-color:rgba(244,248,252,.86)!important;
+ box-shadow:0 12px 28px rgba(0,0,0,.12)!important;
+}
+.timeline-step:nth-of-type(even) .timeline-copy{
+ background:linear-gradient(145deg,rgba(190,210,229,.98),rgba(151,181,209,.96))!important;
+ border-color:rgba(235,242,248,.82)!important;
+ box-shadow:0 12px 28px rgba(0,0,0,.12)!important;
+}
+.timeline-step .timeline-copy p,.timeline-step .timeline-copy strong,.timeline-step .timeline-year{
+ color:#0b2949!important;text-shadow:none!important;
+}
