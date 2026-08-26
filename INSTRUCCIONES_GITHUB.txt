@@ -116,3 +116,9 @@ V24:
 - Se conserva “Se casó por la iglesia.”
 - El resto de V23 permanece sin cambios.
 Prueba: https://invitacion-artemio-70.vercel.app/?v=240
+
+V25:
+- PARROQUIA DE SAN ANTONIO DE PADUA en mayúsculas y con letra más grande.
+- SALÓN JESSY en mayúsculas y con letra más grande.
+- El resto de V24 permanece sin cambios.
+Prueba: https://invitacion-artemio-70.vercel.app/?v=250

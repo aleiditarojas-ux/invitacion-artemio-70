@@ -1572,3 +1572,12 @@ footer{background:linear-gradient(180deg,#03101f,#020914)!important;border-top:1
 .timeline-step .timeline-copy p,.timeline-step .timeline-copy strong,.timeline-step .timeline-year{
  color:#0b2949!important;text-shadow:none!important;
 }
+
+/* V25 — nombres de los lugares más grandes y en mayúsculas */
+.venue-name-large{
+  display:inline-block;
+  font-size:clamp(1.45rem,4.8vw,2rem) !important;
+  line-height:1.18;
+  font-weight:700;
+  letter-spacing:.035em;
+}
